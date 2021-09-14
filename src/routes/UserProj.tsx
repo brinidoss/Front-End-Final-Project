@@ -29,15 +29,6 @@ function UserProjectRoute() {
     <div className="UserProj">
         <h1>Hello World</h1>
 
-
-
-      {/* <h2>Shout Outs for {user}</h2>
-      <p>
-        <Link to="/">Back to All Shoutouts</Link>
-      </p> */}
-
-      {/* <ShoutOutList shoutOuts={projects} />
-      <AddShoutOutForm initialTo={user} onAdd={loadProjects}/> */}
     </div>
   );
 }
