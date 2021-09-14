@@ -1,4 +1,5 @@
 import './App.css';
+import Form from './components/Form';
 import Test from './routes/Test';
 //import TestProject from './components/TestProjects';
 
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
 
       <Test/>
+      <Form/>
    
     </div>
   );

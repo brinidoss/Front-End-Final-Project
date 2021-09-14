@@ -9,7 +9,7 @@ export function fetchProjects() : Promise<Project[]> {
   .then(res => res.data)
 }
 
-export function addProjects(project:Project) : Promise<Project> {
+export function addProject(project:Project) : Promise<Project> {
   return axios.post(`${baseUrl}`, project).then(res => res.data);
 }
 

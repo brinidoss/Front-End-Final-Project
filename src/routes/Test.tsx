@@ -12,10 +12,10 @@ function Test() {
     console.log(projects);
 
     return (
-        <div>
-
+        <div className="TestRoute">
+            <p>Find Your Projects Here</p>
             {projects.map((project, index) =>
-            <p key={`{index}`}>{project.name}</p>    
+            <p key={`${index}-${project.name}`}>{project.name}</p>    
             )}
         </div>
     )

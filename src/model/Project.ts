@@ -5,6 +5,7 @@ export default interface Project {
     category?: string;
     priority: number;
     _id?: string;
+    outdoor?: boolean;
     completed?: boolean;
     username?: string;
 }
