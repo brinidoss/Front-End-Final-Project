@@ -1,34 +1,29 @@
 import { FormEvent, useState } from "react";
 import Project from "../model/Project";
 import { addProject } from "../services/ProjectService";
-//import FormInput from "./FormInput";
-
 
 interface Props {
-  initialTo?: string;
   onAdd?: (project: Project) => void
 }
 
-function Form({ initialTo = "", onAdd }: Props) {
+function Form({ onAdd }: Props) {
   const [ name, setName ] = useState("");
   const [ description, setDescription ] = useState("");
   const [ label, setLabel ] = useState("");
-  //const [ category, setCategory ] = useState("");
+  const [ category, setCategory ] = useState("");
   const [ priority, setPriority ] = useState(0);
   const [ outdoor, setOutdoor ] = useState(false);
   const [ completed, setCompleted ] = useState(false);
 
-  //useEffect(() => setTo(initialTo), [initialTo]);
-
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     addProject({
-      name, description, label, priority, outdoor, completed
+      name, description, label, category, priority, outdoor, completed
     }).then(onAdd);
     setName("");
     setDescription("");
     setLabel("");
-    //setCategory("");
+    setCategory("");
     setPriority(0);
     setCompleted(false);
     setOutdoor(false);
@@ -37,8 +32,7 @@ function Form({ initialTo = "", onAdd }: Props) {
   return (
     <form className="ProjectForm" onSubmit={handleSubmit}>
       <h3>Add a Project</h3>
-      {/* <FormInput label="To" id="AddShoutOutForm__to" value={to} onChange={setTo} required minLength={2}/>
-      <FormInput label="From" id="AddShoutOutForm__from" value={from} onChange={setFrom} required minLength={2}/> */}
+     
         <div className="ProjectForm__option  nameOption">
             <label htmlFor="ProjectForm__name">Project Name</label>
             <input type="text" id="ProjectForm__name" value={name} required minLength={2} onChange={e => setName(e.target.value)} />
@@ -47,6 +41,19 @@ function Form({ initialTo = "", onAdd }: Props) {
         <div className="ProjectForm__option descriptionOption">
             <label htmlFor="ProjectForm__description">Description</label>
             <textarea id="ProjectForm__description" value={description}  onChange={e => setDescription(e.target.value)} rows={4}/>
+        </div>
+
+        <div className="ProjectForm__option categoryOption">
+            <label htmlFor="category">Category</label>
+            <select id="category" name="category" onChange={ (e) => setCategory(e.target.value) }>
+              <option value="dream">Dream Project</option>
+              <option value="indoor">Indoor</option>
+              <option value="outdoor">Outdoor</option>
+              <option value="upNext">Up Next</option>
+              <option value="inProgress">In Progress</option>
+
+            </select>
+            
         </div>
 
         <div className="ProjectForm__option labelOption">
