@@ -31,7 +31,7 @@ function Test() {
 
     return (
         <div className="TestRoute">
-            <MainBoard data={fakeData}/>
+            <MainBoard data={projects}/>
         </div>
     )
 }

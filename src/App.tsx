@@ -16,11 +16,11 @@ function App() {
         <NavBar/>
         <div className="main-content">
             <Route path="/" exact>
-              <HomePage/>
+              <LandingPage/>
             </Route>
             <Switch>
-              <Route path="/LandingPage" exact>
-                <LandingPage />
+              <Route path="/HomePage" exact>
+                <HomePage />
               </Route>
               <Route path="/Test" exact>
                 <Test/>

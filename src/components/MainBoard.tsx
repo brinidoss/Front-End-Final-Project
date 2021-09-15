@@ -9,11 +9,11 @@ interface Props {
 
 
 function Board({data}: Props) {
-    const [projects, setProjects] = useState(data)
+    const [projects, setProjects] = useState<Project[]>(data);
     
 
     //Filter by category 
-
+    console.log(projects);
 
     let indoorProjects = projects.filter(x => x.outdoor === false)
 
