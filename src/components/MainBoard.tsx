@@ -58,9 +58,7 @@ function Board({data}: Props) {
             </div>
 
 
-            {projects.map((project, index) =>
-            <p key={`${index}-${project.name}`}>{project.name}</p>    
-            )}
+            
         
         </div>
     );
