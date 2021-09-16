@@ -18,7 +18,9 @@ function Form({ onAdd }: Props) {
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     addProject({
-      name, description, label, category, priority, outdoor, completed
+      category: {
+      name, description, label, priority, outdoor, completed}
+
     }).then(onAdd);
     setName("");
     setDescription("");
