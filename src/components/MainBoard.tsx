@@ -18,7 +18,7 @@ function Board({data}: Props) {
 
 
 
-    console.log(projects);
+    console.log(projects[0]);
     
 
     //Filter by category 
