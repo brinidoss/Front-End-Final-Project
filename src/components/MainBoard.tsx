@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Interface } from "readline";
 import Project from "../model/Project";
 import '../components/MainBoard.css';
@@ -9,18 +9,30 @@ interface Props {
 
 
 function Board({data}: Props) {
-    const [projects, setProjects] = useState<Project[]>(data);
+    const [projects, setProjects] = useState<Project[]>([]);
+    console.log(projects);
+
+    useEffect(() => {
+          setProjects(data);
+    }, [data]);
+ 
+
+
+    console.log(projects);
     
 
     //Filter by category 
     console.log(projects);
+    console.log(data);
 
     let indoorProjects = projects.filter(x => x.outdoor === false)
+    console.log(indoorProjects);
 
     let outdoorProjects = projects.filter(x => x.outdoor === true)
+    console.log(outdoorProjects);
 
     let dreamProjects = projects.filter(x => x.category === "dream")
-    console.log(outdoorProjects);
+    console.log(dreamProjects);
 
 
     return(
