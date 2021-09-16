@@ -11,7 +11,7 @@ function Form({ onAdd }: Props) {
   const [ description, setDescription ] = useState("");
   const [ label, setLabel ] = useState("");
   const [ category, setCategory ] = useState("");
-  const [ priority, setPriority ] = useState(0);
+  //const [ priority, setPriority ] = useState(0);
   const [ outdoor, setOutdoor ] = useState(false);
   const [ completed, setCompleted ] = useState(false);
 
@@ -19,14 +19,14 @@ function Form({ onAdd }: Props) {
     e.preventDefault();
     addProject({
       category: {
-      name, description, label, priority, outdoor, completed}
+      name, description, label, outdoor, completed}
 
     }).then(onAdd);
     setName("");
     setDescription("");
-    setLabel("");
+    setLabel("none");
     setCategory("");
-    setPriority(0);
+    //setPriority(0);
     setCompleted(false);
     setOutdoor(false);
   }
@@ -49,9 +49,8 @@ function Form({ onAdd }: Props) {
             <label htmlFor="category">Category</label>
             <select id="category" name="category" onChange={ (e) => setCategory(e.target.value) }>
               <option value="dream">Dream Project</option>
-              <option value="indoor">Indoor</option>
-              <option value="outdoor">Outdoor</option>
-              <option value="upNext">Up Next</option>
+              <option value="comingSoon">Coming Soon</option>
+              <option value="urgent">Urgent</option>
               <option value="inProgress">In Progress</option>
 
             </select>
@@ -60,6 +59,8 @@ function Form({ onAdd }: Props) {
 
         <div className="ProjectForm__option labelOption">
             <p>Label</p>
+            <input type="radio" name="label" id="none" value="none" onChange={ (e) => setLabel(e.target.value) }/>
+            <label htmlFor="none">None</label>
             <input type="radio" name="label" id="kitchen" value="kitchen" onChange={ (e) => setLabel(e.target.value) }/>
             <label htmlFor="kitchen">Kitchen</label>
             <input type="radio" name="label" id="bath" value="bath" onChange={ (e) => setLabel(e.target.value) }/>
@@ -70,9 +71,11 @@ function Form({ onAdd }: Props) {
             <label htmlFor="living">Living Room</label>
             <input type="radio" name="label" id="basement" value="basement" onChange={ (e) => setLabel(e.target.value) }/>
             <label htmlFor="basement">Basement</label>
+            <input type="radio" name="label" id="office" value="office" onChange={ (e) => setLabel(e.target.value) }/>
+            <label htmlFor="office">Home Office</label>
         </div>
 
-        <div className="ProjectForm__option priorityOption">
+        {/* <div className="ProjectForm__option priorityOption">
             <p>Priority</p>
             <input type="radio" name="priority" id="low" onChange={ (e) => setPriority(0) }/>
             <label htmlFor="low">Wish List</label>
@@ -80,7 +83,7 @@ function Form({ onAdd }: Props) {
             <label htmlFor="medium">Coming Soon</label>
             <input type="radio" name="priority" id="high" onChange={ (e) => setPriority(2) }/>
             <label htmlFor="high">Up Next</label>
-        </div>
+        </div> */}
 
         <div className="ProjectForm__option outdoorOption">
             <p>Indoor or Outdoor</p>
