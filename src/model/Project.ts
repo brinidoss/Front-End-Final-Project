@@ -19,7 +19,8 @@ export default interface Project {
         _id?: string;
         outdoor?: boolean;
         completed?: boolean;
-        username?: string;
+        user?: any;
+       
     }
 }
 

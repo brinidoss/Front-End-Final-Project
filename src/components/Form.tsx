@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import { useAuthUser } from "../Context/auth-context";
 import Project from "../model/Project";
 import { addProject } from "../services/ProjectService";
 
@@ -15,11 +16,14 @@ function Form({ onAdd }: Props) {
   const [ outdoor, setOutdoor ] = useState(false);
   const [ completed, setCompleted ] = useState(false);
 
+  const user = useAuthUser();
+
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
+
     addProject({
       category: {
-      name, description, label, outdoor, completed}
+      name, description, label, outdoor, completed, user}
 
     }).then(onAdd);
     setName("");

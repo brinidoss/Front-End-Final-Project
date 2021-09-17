@@ -5,12 +5,14 @@ import NavBar from './components/NavBar';
 import Test from './routes/Test';
 import HomePage from '../src/components/HomePage';
 import Form from './components/Form';
+import { AuthContextProvider } from './Context/auth-context';
 
 //import TestProject from './components/TestProjects';
 
 
 function App() {
   return (
+    <AuthContextProvider>
     <div className="App">
       <Router>
         <NavBar/>
@@ -41,6 +43,7 @@ function App() {
     
    
     </div>
+    </AuthContextProvider>
   );
 }
 
