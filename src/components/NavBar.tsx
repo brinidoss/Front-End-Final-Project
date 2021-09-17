@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import './NavBar.css';
 import HomeIcon from '@material-ui/icons/Home';
 
+
 function NavBar() {
     
     return (
@@ -11,10 +12,15 @@ function NavBar() {
 
     <nav className="Nav">
         <div className="Home">
-            <NavLink to="/" id="home-link"> <h1 >FIX IT</h1></NavLink>
+         <h1 >FIX IT</h1>
         </div>
         <div className="Extras">
-            <HomeIcon/>
+        <NavLink to="/homepage" id="home-link">
+        <HomeIcon/>
+            </NavLink>
+         
+ 
+ 
             
         
 

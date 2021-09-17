@@ -1,5 +1,23 @@
+.parent {
+    position: fixed;
+    background-color: #a3acb1;
+    height: 100vh;
+    width: 100vw;
+}
+
 .test-btn {
     margin-top: 25px;
     display: flex;
     justify-content: space-around;
+ 
+}
+
+.boardBtn {
+background-color: #3c5b74;
+
+
+}
+
+.ProjectBtn {
+background-color: #b67929;
 }

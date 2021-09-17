@@ -5,12 +5,12 @@ import "../components/HomePage.css"
 
 function HomePage() {
     return (
-        <div>
+        <div className="parent">
             
             <div className="test-btn">
             <NavLink to="/Test"> <button className="boardBtn">Go to Board</button></NavLink>
             <NavLink to="/Form"> <button className="ProjectBtn">New Project</button></NavLink>
-            <NavLink to="/"> <button className="HomePage">Home Page</button></NavLink>
+            <NavLink to="/"> <button className="LandingPage">Landing Page</button></NavLink>
 
             </div>
             

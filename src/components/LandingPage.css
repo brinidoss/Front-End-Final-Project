@@ -7,12 +7,13 @@
 font-family: fantasy; 
 font-size: 70px;
 padding-top: 50px;
+color: #00243f;
 }
 
 .secondLine {
     font-family: monospace;
     font-size: 50px;
-    color: #a3acb1;
+    color: ##b67929;
 }
 
 .landingBtn {
@@ -20,10 +21,12 @@ display: flex;
 margin: auto;
 justify-content: center;
 padding-top: 15px;
-background-color: #b67929;
+color: white;
+background-color: #00243f;
 width: 150px;
 height: 50px;
 font-weight: 800;
+font-size: larger;
 }
 
 img {

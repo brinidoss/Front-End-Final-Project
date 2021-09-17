@@ -1,3 +1,8 @@
+.Header {
+  background-color: #264b77;
+  
+}
+
 nav.Nav {
     display: flex;
   }
@@ -10,7 +15,7 @@ nav.Nav {
   }
   h1 {
     font-size: 54px;
-    
+    color: #b67929;
     margin-top: 5px;
     font-family: 'Martel Sans', sans-serif;
     text-transform: uppercase;
@@ -24,7 +29,7 @@ nav.Nav {
     height: 60px;
     width: 60px;
     padding: 15px;
-    fill: blue;
+    fill: black;
     
   }
   svg.MuiSvgIcon-root.Fav {
@@ -52,42 +57,13 @@ nav.Nav {
   svg.MuiSvgIcon-root.Search:hover {
     fill: white;
   }
+
+  svg.MuiSvgIcon-root.HomeIcon {
+    fill: white;
+  }
   
   
   
   
 
 
-
-
-/* .topnav {
-    border-radius: 10px;
-    background-color: #00243f;
-    color: white;
-}
-
-.fixit {
-    
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
-    float: left;
-}
-
-.login-container{
-    display: flex;
-    float: right;
-    
-} */
-
-/* .topnav .login-container button {
-    float: right;
-    display: block;
-    text-align: center;
-    padding: 14px 10px;
-    margin: 0px 0px 16px 30px;
-    background-color: #b67929;
-    color: white;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  } */
