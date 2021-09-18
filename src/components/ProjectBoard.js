@@ -6,10 +6,10 @@ import './ProjectBoard.css'
 
 function ProjectBoard({data}) {
     console.log(data);
-    const filterDream = data.filter(x => x.title ==='Dream');
-    const filterNext = data.filter(x => x.title ==='Next');
-    const filterUrgent = data.filter(x => x.title ==='Urgent');
-    const filterInProgress = data.filter(x => x.title ==='In Progress');
+    const filterDream = data.filter(x => x.category ==='dream');
+    const filterNext = data.filter(x => x.category ==='comingSoon');
+    const filterUrgent = data.filter(x => x.category ==='urgent');
+    const filterInProgress = data.filter(x => x.category ==='inProgress');
 
     let orgainize = [
         {
@@ -109,7 +109,12 @@ function ProjectBoard({data}) {
         return 'dnd-item'
     }
 
+    console.log(filterDream);
+    console.log(filterNext);
+    console.log(filterUrgent);
+    console.log(filterInProgress);
     console.log(list);
+    console.log(orgainize);
     
     
     

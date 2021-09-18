@@ -16,14 +16,14 @@ function Form({ onAdd }: Props) {
   const [ outdoor, setOutdoor ] = useState(false);
   const [ completed, setCompleted ] = useState(false);
 
-  const user = useAuthUser();
+  const user: any = useAuthUser();
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
     addProject({
-      category: {
-      name, description, label, outdoor, completed, user}
+      
+      name, description, label, outdoor, completed, user, category
 
     }).then(onAdd);
     setName("");

@@ -25,10 +25,10 @@ function Board({data}: Props) {
     console.log(projects);
     console.log(data);
 
-    let indoorProjects = projects.filter(x => x.category.outdoor === false)
+    let indoorProjects = projects.filter(x => x.outdoor === false)
     console.log(indoorProjects);
 
-    let outdoorProjects = projects.filter(x => x.category.outdoor === true)
+    let outdoorProjects = projects.filter(x => x.outdoor === true)
     console.log(outdoorProjects);
 
     // let dreamProjects = projects.filter(x => x.category === "dream")
@@ -44,7 +44,7 @@ function Board({data}: Props) {
                 </div>
                 <div>
                     {indoorProjects.map((proj, index) => 
-                    <div key={`${index}`} className="Project-Card">{proj.category.name}</div>)}
+                    <div key={`${index}`} className="Project-Card">{proj.name}</div>)}
                 </div>
                 
             </div>
@@ -54,7 +54,7 @@ function Board({data}: Props) {
                 </div>
                 <div>
                     {outdoorProjects.map((proj, index) => 
-                    <div key={`${index}`} className="Project-Card">{proj.category.name}</div>)}
+                    <div key={`${index}`} className="Project-Card">{proj.name}</div>)}
                 </div>
                 
             </div>
