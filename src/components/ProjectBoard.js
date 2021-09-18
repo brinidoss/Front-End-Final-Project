@@ -78,6 +78,12 @@ function ProjectBoard({data}) {
   
       const handleDragStart = (e, params) => {
         console.log('drag stating',params)
+        console.log(dragItem.current);
+        console.log(dragNode.current);
+        console.log(e.target);
+        console.log(params);
+        console.log(e.target.name);
+        
         dragItem.current = params;
         dragNode.current = e.target;
         dragNode.current.addEventListener('dragend', handleDragEnd)
@@ -88,6 +94,7 @@ function ProjectBoard({data}) {
     }
     const handleDragEnter = (e, targetItem) => {
         console.log('Entering Drag', targetItem);
+        console.log(targetItem.name);
         const currentItem = dragItem.current;
         if(e.target !== dragNode.current) {
             console.log("target is not the same");
