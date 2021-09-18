@@ -3,7 +3,7 @@
 //     description?: string;
 //     label?: string;
 //     category?: string;
-//     priority: number;
+//     priority?: number;
 //     _id?: string;
 //     outdoor?: boolean;
 //     completed?: boolean;

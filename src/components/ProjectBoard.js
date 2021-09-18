@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import './ProjectBoard.css'
 
 
@@ -25,45 +25,27 @@ function ProjectBoard({data}) {
           title: 'In Progress', items: []
         }
       ];
-      
-
       orgainize[0].items = orgainize[0].items.concat(filterDream);
       orgainize[1].items = orgainize[1].items.concat(filterNext);
       orgainize[2].items = orgainize[2].items.concat(filterUrgent);
       orgainize[3].items = orgainize[3].items.concat(filterInProgress);
 
-    //   function insertNewArr(arr, newArr) {
-            
+    //   function insertNewArr(arr, newArr) {    
     //         arr = [...arr, newArr]
-
     //         return arr;
-      
+
     //  }
 
-     
     //  insertNewArr(orgainize[1].items, filterNext);
     //  insertNewArr(orgainize[2].items, filterUrgent);
     //  insertNewArr(orgainize[3].items, filterInProgress);
      
-      
-
-
-
     const [list, setList] = useState(orgainize);
 
     // console.log(list);
     const[dragging, setDragging] = useState(false);
     const dragItem = useRef();
     const dragNode = useRef();
-
-
-
- 
-
-
- 
-
-
 
 
 //   console.log(filterDream);
@@ -85,14 +67,7 @@ function ProjectBoard({data}) {
 
     // console.log(list);
   
-  
-
-
-
- 
-
-
-    const handleDragStart = (e, params) => {
+      const handleDragStart = (e, params) => {
         console.log('drag stating',params)
         dragItem.current = params;
         dragNode.current = e.target;

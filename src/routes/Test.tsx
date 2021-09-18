@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import MainBoard from '../components/MainBoard';
 import ProjectBoard from '../components/ProjectBoard';
 import Project from '../model/Project';
 import { fetchProjects } from '../services/ProjectService'
