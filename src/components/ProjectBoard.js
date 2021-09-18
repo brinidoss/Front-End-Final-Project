@@ -49,7 +49,7 @@ function ProjectBoard({data}) {
 
     useEffect(() => {
       setList(orgainize);
-    }, [orgainize]);
+    }, [setList]);
 
     // console.log(list);
     const[dragging, setDragging] = useState(false);
