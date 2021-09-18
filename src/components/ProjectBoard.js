@@ -25,6 +25,8 @@ function ProjectBoard({data}) {
           title: 'In Progress', items: []
         }
       ];
+
+      console.log(orgainize[1].items);
       orgainize[0].items = orgainize[0].items.concat(filterDream);
       orgainize[1].items = orgainize[1].items.concat(filterNext);
       orgainize[2].items = orgainize[2].items.concat(filterUrgent);
