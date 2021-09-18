@@ -5,7 +5,7 @@ import { fetchProjects } from '../services/ProjectService'
 
 function Test() {
     const [ projects, setProjects ] = useState<Project[]>([]);
-    useEffect(loadProjects, [])
+    useEffect(loadProjects , [])
 
     
 
@@ -13,7 +13,7 @@ function Test() {
   
     function loadProjects() {
       fetchProjects().then(setProjects);
-      console.log('hello');
+
     }
     console.log(projects);
 

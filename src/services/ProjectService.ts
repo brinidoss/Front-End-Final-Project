@@ -7,6 +7,7 @@ const baseUrl = 'https://us-central1-home-improv-projects.cloudfunctions.net/api
 export function fetchProjects() : Promise<Project[]> {
   return axios.get(`${baseUrl}`)
   .then(res => res.data)
+  
 }
 
 export function addProject(project:Project) : Promise<Project> {
