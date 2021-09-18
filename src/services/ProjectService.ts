@@ -19,3 +19,8 @@ export function fetchProjectsTo(user: string) : Promise<Project[]> {
   })
   .then(res => res.data)
 }
+
+export function updateProjects(newCategory: string) : Promise<Project[]> {
+  return axios.put(`${baseUrl}/614601a0a4aba6386734fb1e`, newCategory)
+  .then(res => res.data)
+}
