@@ -5,19 +5,42 @@
     width: 100vw;
 }
 
-.test-btn {
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-around;
+.graph {
+    text-align: left;
+    height: 1px;
+    width: 1px;
+    padding-top: 150px;
+   
+
+}
+
+.brdbtn {
+    text-align: right;
+    padding-right: 250px;
+    padding-top: 150px;
  
+
+}
+
+.projbtn {
+    text-align: right;
+    padding-right: 250px;
+    padding-top: 150px;
+
 }
 
 .boardBtn {
 background-color: #3c5b74;
-
-
+font-weight: 800;
+padding: 20px;
+padding-left: 50px;
+padding-right: 50px;
 }
 
 .ProjectBtn {
 background-color: #b67929;
+font-weight: 800;
+padding: 20px;
+padding-left: 50px;
+padding-right: 50px;
 }

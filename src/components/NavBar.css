@@ -5,14 +5,16 @@
 
 nav.Nav {
     display: flex;
+  
   }
   div.Home {
     flex: 1;
   }
-  #home-link {
+  #home-link:visited {
     text-decoration: none;
+    color: black; 
+     }
     
-  }
   h1 {
     font-size: 54px;
     color: #b67929;
@@ -32,35 +34,8 @@ nav.Nav {
     fill: black;
     
   }
-  svg.MuiSvgIcon-root.Fav {
-    height: 50px;
-    width: 50px;
-    padding: 15px, 2px, 15px, 15px;
-    fill: gray;
+  
     
-    
-  }
-  svg.MuiSvgIcon-root.Fav:hover {
-    fill: white;
-  }
-  
-  
-  
-  
-  svg.MuiSvgIcon-root.Search {
-    height: 50px;
-    width: 50px;
-    fill: grey;
-    padding-left: 20px;
-  }
-  
-  svg.MuiSvgIcon-root.Search:hover {
-    fill: white;
-  }
-
-  svg.MuiSvgIcon-root.HomeIcon {
-    fill: white;
-  }
   
   
   

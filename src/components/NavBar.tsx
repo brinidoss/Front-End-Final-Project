@@ -18,23 +18,16 @@ function NavBar() {
         <NavLink to="/homepage" id="home-link">
         <HomeIcon/>
             </NavLink>
-         
+        
+            <NavLink to="/"> <button className="LandingPage">Logout</button></NavLink>
+
+            </div>    
+            </nav>
+        </header> 
  
  
-            
-        
-
-
-            
-        
-        </div>
-    
-    </nav>
-
-</header>
-
 );
-    }
+}
 
 
 export default NavBar;
