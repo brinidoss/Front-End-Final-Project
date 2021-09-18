@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import './ProjectBoard.css'
 
 
@@ -26,6 +26,9 @@ function ProjectBoard({data}) {
         }
       ];
       orgainize[0].items = orgainize[0].items.concat(filterDream);
+      console.log(orgainize[0]);
+      console.log(orgainize[0].items);
+      console.log(orgainize[0].items.concat(filterDream));
       orgainize[1].items = orgainize[1].items.concat(filterNext);
       orgainize[2].items = orgainize[2].items.concat(filterUrgent);
       orgainize[3].items = orgainize[3].items.concat(filterInProgress);
@@ -41,6 +44,10 @@ function ProjectBoard({data}) {
     //  insertNewArr(orgainize[3].items, filterInProgress);
      
     const [list, setList] = useState(orgainize);
+
+    useEffect(() => {
+      setList(orgainize);
+    }, [orgainize]);
 
     // console.log(list);
     const[dragging, setDragging] = useState(false);
