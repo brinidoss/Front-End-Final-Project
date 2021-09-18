@@ -1,0 +1,13 @@
+.ProjectCard__card {
+  border: solid black 1px;
+  padding: 10px;
+  margin: 5px;
+  background-color: white;
+  cursor: move;
+  width: 200px;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+  background-color: blue;
+}

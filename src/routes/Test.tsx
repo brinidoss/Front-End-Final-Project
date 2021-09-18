@@ -16,27 +16,11 @@ function Test() {
 
     }
 
-    function updateOnClick() {
-       // e.preventDefault();
-
-        updateProject({
-            name: 'Rose Garden',
-            description: 'plant roses',
-            label: 'none',
-            outdoor: true,
-            completed: false,
-            user: null,
-            category: 'inProgress'
-        })
-
-    console.log('hello there');
-    };
     console.log(projects);
 
     return (
         <div className="TestRoute">
             <ProjectBoard data={projects}/>
-            <button onClick={updateOnClick}>Update</button>
         </div>
     )
 }
