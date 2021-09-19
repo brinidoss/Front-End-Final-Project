@@ -1,12 +1,25 @@
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import './ProjectBoard.css'
+import { fetchProjects } from '../services/ProjectService'
 
 
 
+function ProjectBoard() { 
+  
+  const [data, setData] = useState([]);
+  
+  function loadProjects() {
+    fetchProjects().then(setData);
 
-function ProjectBoard({data}) {
-    console.log(data);
+  }
+  
+  useEffect(loadProjects , [])
+ 
+
+  
+
+  console.log(data);
     let newData = data;
     // const updateData = (data) = {
 
@@ -222,6 +235,8 @@ function ProjectBoard({data}) {
     
     
     return (
+
+      
         <div className="drag-n-drop">
         {list.map((grp, grpI) => (
           <div key={grp.title} onDragEnter={dragging && !grp.items.length?(e) => handleDragEnter(e,{grpI, itemI: 0}):null} className="dnd-group">
@@ -240,6 +255,10 @@ function ProjectBoard({data}) {
           </div>
         ))}
         </div>
+        
+
+
+
         // <div className="drag-n-drop">
         // {list.map((grp, grpI) => (
         //   <div key={grp.title} onDragEnter={dragging && !grp.items.length?(e) => handleDragEnter(e,{grpI, itemI: 0}):null} className="dnd-group">

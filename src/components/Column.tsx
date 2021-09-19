@@ -29,7 +29,7 @@ function Column({category}: Props) {
         <div className="Column"
             onDragOver={(e) => console.log(category)}
         >
-
+            
             {projects.filter(project => project.category === category).map((project, index) => 
             
             <ProjectCard

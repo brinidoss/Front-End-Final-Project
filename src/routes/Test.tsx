@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProjectBoard from '../components/ProjectBoard';
 import Project from '../model/Project';
-import { fetchProjects, updateProject } from '../services/ProjectService'
+import { fetchProjects } from '../services/ProjectService'
 
 function Test() {
     const [ projects, setProjects ] = useState<Project[]>([]);
@@ -13,6 +13,7 @@ function Test() {
   
     function loadProjects() {
       fetchProjects().then(setProjects);
+      console.log(projects)
 
     }
 
@@ -20,7 +21,7 @@ function Test() {
 
     return (
         <div className="TestRoute">
-            <ProjectBoard data={projects}/>
+            <ProjectBoard/>
         </div>
     )
 }

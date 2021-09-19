@@ -41,6 +41,7 @@ function ProjectCard({project, index }: Props) {
             >
                 <p>{project.name}</p>
                 <p>{project.category}</p>
+                <button className="editBtn">edit</button>
             </div>
             
         </div>
