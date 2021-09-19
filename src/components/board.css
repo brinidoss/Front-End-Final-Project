@@ -8,3 +8,13 @@
         align-items: start;
       
 }
+.colum-box {
+    background-color: darkgrey;
+    border-radius: 10px;
+    width: 82%;
+    margin-left: 8%;
+}
+h2 {
+    margin: 0;
+    
+}

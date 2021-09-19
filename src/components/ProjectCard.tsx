@@ -30,18 +30,42 @@ function ProjectCard({project, index }: Props) {
         //console.log(dropzone);
 
    }
+   let dreamCard = '';
+   let soon = '';
+   let urgent = '';
+   let inProgress = '';
+
+   if(project.category === 'dream'){
+       dreamCard = 'dream'
+   }
+   else if(project.category === 'comingSoon'){
+        soon = 'soon'
+   }
+   else if(project.category === 'urgent'){
+    soon = 'urgent'
+    }
+    else if(project.category === 'inProgress'){
+    soon = 'progress'
+}
+
+
+   
     
 
     return (
         <div className="ProjectCard">
-            <div className="ProjectCard__card draggable" draggable='true'
+            <div className={`ProjectCard__card draggable ${dreamCard} ${soon} ${urgent} ${inProgress}`} draggable='true'
             onDragStart={(e) => handleDragStart(e)}
             onDragEnd={() => console.log('hmm')}
             onDragOver={(e) => e.preventDefault()}
             >
+
                 <p>{project.name}</p>
-                <p>{project.category}</p>
-                <button className="editBtn">edit</button>
+                
+                <div className="btn-container">
+                    <button className="editBtn">Edit</button>
+                </div>
+                
             </div>
             
         </div>

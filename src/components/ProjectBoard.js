@@ -42,7 +42,7 @@ function ProjectBoard() {
         return (data.filter(x => x.category ==='dream'));
     }
     const handleFilterNext = (data) => {
-      return (data.filter(x => x.category ==='dream'));
+      return (data.filter(x => x.category ==='comingSoon'));
     }
     const handleUrgent = (data) => {
       return (data.filter(x => x.category ==='urgent'));
