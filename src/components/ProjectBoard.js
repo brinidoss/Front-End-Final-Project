@@ -7,10 +7,9 @@ import './ProjectBoard.css'
 
 function ProjectBoard({data}) {
     console.log(data);
-    
+    let newData = data;
     // const updateData = (data) = {
 
-      
     // } 
     // const handleFilterDreams = (data) => {
     //   const filter = data.filter(x => x.category ==='dream');
@@ -26,36 +25,45 @@ function ProjectBoard({data}) {
     //   return data.filter(x => x.category ==='inProgress');
     // }
    
-    
-
-
-
-    
-    
-    const filterDream = data.filter(x => x.category ==='dream');
-    const filterNext = data.filter(x => x.category ==='comingSoon');
-    const filterUrgent = data.filter(x => x.category ==='urgent');
-    const filterInProgress = data.filter(x => x.category ==='inProgress');
+    const handleFilter = (data) => {
+        return (data.filter(x => x.category ==='dream'));
+    }
+    const handleFilterNext = (data) => {
+      return (data.filter(x => x.category ==='dream'));
+    }
+    const handleUrgent = (data) => {
+      return (data.filter(x => x.category ==='urgent'));
+    }
+    const handeInProgress = (data) => {
+      return (data.filter(x => x.category ==='inProgress'));
+    }
+ 
+    // const filterDream = data.filter(x => x.category ==='dream');
+    // const filterNext = data.filter(x => x.category ==='comingSoon');
+    // const filterUrgent = data.filter(x => x.category ==='urgent');
+    // const filterInProgress = data.filter(x => x.category ==='inProgress');
 
     useEffect(() => {
-
-    },)
-    
-    
-    let orgainize = [
-        {
-          title: 'Dream', items: []
-        },
-        {
-          title: 'Next', items: []
-        },
-        {
-          title: 'Urgent', items:[]
-        },
-        {
-          title: 'In Progress', items: []
-        }
-      ];
+        handleFilter(newData);
+        handleFilterNext(newData);
+        handleUrgent(newData);
+        handeInProgress(newData);
+        console.log('heredfdfdfddf')
+    },[newData]);
+        // let orgainize = [
+    //     {
+    //       title: 'Dream', items: []
+    //     },
+    //     {
+    //       title: 'Next', items: []
+    //     },
+    //     {
+    //       title: 'Urgent', items:[]
+    //     },
+    //     {
+    //       title: 'In Progress', items: []
+    //     }
+    //   ];
 
       // console.log(orgainize[1].items);
      
@@ -79,23 +87,54 @@ function ProjectBoard({data}) {
     //  insertNewArr(orgainize[2].items, filterUrgent);
     //  insertNewArr(orgainize[3].items, filterInProgress);
      
-    const [list, setList] = useState([]);
+    const [list, setList] = useState([
+      {
+        title: 'Dream', items: []
+      },
+      {
+        title: 'Next', items: []
+      },
+      {
+        title: 'Urgent', items:[]
+      },
+      {
+        title: 'In Progress', items: []
+      }
+    ]);
     
     const updateList = () => {
-      orgainize[0].items = orgainize[0].items.concat(filterDream);
-      orgainize[1].items = orgainize[1].items.concat(filterNext);
-      orgainize[2].items = orgainize[2].items.concat(filterUrgent);
-      orgainize[3].items = orgainize[3].items.concat(filterInProgress);
+      
+      setList(list.map((x) => {
+        if(x.title === 'Dream') {
+          return {...x, items: handleFilter(newData)}
+        }
+        else if (x.title === 'Next'){
+          return {...x, items: handleFilterNext(newData)}
+        }
+        else if (x.title === 'Urgent') {
+          return {...x, items: handleUrgent(newData)}
+        }
+        else if (x.title === 'In Progress') {
+          return {...x, items: handeInProgress(newData)}
+        }
+        return null;
+      }))
+      
+      
+      // orgainize[0].items = orgainize[0].items.concat(filterDream);
+      // orgainize[1].items = orgainize[1].items.concat(filterNext);
+      // orgainize[2].items = orgainize[2].items.concat(filterUrgent);
+      // orgainize[3].items = orgainize[3].items.concat(filterInProgress);
     }
     
+   
     
     
 
     useEffect(() => {
-      updateList()
-      setList(orgainize);
-     
-    }, [setList]);
+     updateList();
+
+    },[setList]);
 
 
 
