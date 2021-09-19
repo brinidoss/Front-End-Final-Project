@@ -66,6 +66,7 @@ return (
             <div className={`ProjectCard__card draggable ${styleCard}`} draggable='true'
             onDragStart={ handleOnDragStart }
             onDragOver={(e) => e.preventDefault()}
+            
             >
 
                 <p>{project.name}</p>

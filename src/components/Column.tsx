@@ -11,32 +11,37 @@ interface Props {
     projects: Project[];
 }
 
+
+
+
+
 function Column({category, handleOnDragStart, handleOnDrop, projects}: Props) {
 
-    const [collapse, setCollapse] = useState<Boolean>(true);
-    const [height, setHeight] = useState<String>('min');
+    // const [collapse, setCollapse] = useState<Boolean>(true);
+    // const [height, setHeight] = useState<String>('min');
 
-    const columnParentDiv:any = document.querySelector<Element>('.Column');
+    // const columnParentDiv:any = document.querySelector<Element>('.Column');
 
-    function handleOnDragOver(): void {
-        // setCollapse(!collapse);
-        // console.log(collapse);
-       console.log('hello there');
-        console.log(columnParentDiv.hasChildNodes());
-        console.log(projects.filter(project => project.category === category).length);
+    // function handleOnDragOver(): void {
+    //     // setCollapse(!collapse);
+    //     // console.log(collapse);
+    //    console.log('hello there');
+    //     console.log(columnParentDiv.hasChildNodes());
+    //     console.log(projects.filter(project => project.category === category).length);
  
 
-        // if (height === "min") {
-        //     setHeight('max'); 
-        // } else {
-        //     setHeight('min');
-        // }
-    }
+    //     // if (height === "min") {
+    //     //     setHeight('max'); 
+    //     // } else {
+    //     //     setHeight('min');
+    //     // }
+    // }
+
 
     return (
         <div className="Column"
            onDrop={ handleOnDrop }
-           onDragOver={ handleOnDragOver }
+           //onDragOver={ handleOnDragOver }
         >
 
             {projects.filter(project => project.category === category).map((project, index) => 
