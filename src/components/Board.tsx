@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Project from '../model/Project'
 import { fetchProjects, updateProject } from '../services/ProjectService';
 import Column from './Column'
+import './board.css';
 
 function Board() {
 
@@ -43,10 +44,50 @@ function Board() {
 
     return (
         <div className="Board">
-            <Column projects={projects} category='dream' handleOnDragStart={ handleDragStart } handleOnDrop={() => handleOnDrop('dream')}/>
-            <Column projects={projects} category='comingSoon' handleOnDragStart={ handleDragStart } handleOnDrop={() => handleOnDrop('comingSoon')}/>
-            <Column projects={projects} category='urgent' handleOnDragStart={ handleDragStart } handleOnDrop={() => handleOnDrop('urgent')}/>
-            <Column projects={projects} category='inProgress' handleOnDragStart={ handleDragStart } handleOnDrop={() => handleOnDrop('inProgress')}/>
+            <div>
+                <div className="colum-box">
+                    <h2>Dream</h2>
+                </div>
+                <Column category='dream' 
+                        projects={projects}
+                        handleOnDragStart={ handleDragStart }
+                        handleOnDrop={() => handleOnDrop('dream')}
+                />
+            </div>
+            <div>
+                <div className="colum-box">
+                    <h2>Coming Soon</h2>
+                </div>
+                <Column category='comingSoon' 
+                        projects={projects}
+                        handleOnDragStart={ handleDragStart }
+                        handleOnDrop={() => handleOnDrop('comingSoon')}
+                />
+            </div>
+            <div>
+                 <div className="colum-box">
+                    <h2>Urgent</h2>
+                </div>
+                <Column category='urgent' 
+                        projects={projects}
+                        handleOnDragStart={ handleDragStart }
+                        handleOnDrop={() => handleOnDrop('urgent')}
+                />
+            </div>
+            <div>
+                <div className="colum-box">
+                    <h2>In Progress</h2>
+                </div>
+                <Column category='inProgress' 
+                        projects={projects}
+                        handleOnDragStart={ handleDragStart }
+                        handleOnDrop={() => handleOnDrop('inProgress')}
+                />
+            </div>
+            
+            
+            
+            
             
         </div>
     )

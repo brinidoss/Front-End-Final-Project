@@ -1,7 +1,8 @@
 .Column {
   border: solid black 2px;
   padding: 10px;
-  margin: 10px;
+  margin: 0px 10px 10px 10px;
   background-color: palevioletred;
   width: 250px;
+  border-radius: 10px;
 }
