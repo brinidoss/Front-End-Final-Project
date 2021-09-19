@@ -9,7 +9,14 @@ interface Props {
     projects: Project[];
 }
 
+
+
+
+
 function Column({category, handleOnDragStart, handleOnDrop, projects}: Props) {
+
+    
+
 
     return (
         <div className="Column"

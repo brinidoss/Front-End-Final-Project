@@ -3,6 +3,7 @@ import Project from '../model/Project'
 import { fetchProjects, updateProject } from '../services/ProjectService';
 import Column from './Column'
 import './board.css';
+import { count } from 'console';
 
 function Board() {
 
@@ -19,11 +20,9 @@ function Board() {
     function handleDragStart(project: Project): void {
         setUpdatedProject(project);
     }
-
-    function handleOnDrop(category: string): void {
+     function handleOnDrop(category: string): void {
         let newProject: any = '';
         setUpdatedCategory(category);
-
         // updatedProject ? 
         // setUpdatedProject(prevUpdatedProject => ({   <== so pretty to look at,
         //     updatedProject: {                            but it doesn't work :(
@@ -41,6 +40,26 @@ function Board() {
         loadProjects();
         
     }
+    function handleDragEnter(category: string) {
+        console.log('entering')
+        let newProject: any = '';
+        setUpdatedCategory(category);
+        // updatedProject ? 
+        // setUpdatedProject(prevUpdatedProject => ({   <== so pretty to look at,
+        //     updatedProject: {                            but it doesn't work :(
+        //         ...prevUpdatedProject,                   how you set state of 
+        //         category: updatedCategory                a property of an object
+        //     }
+        // }))
+        // : console.log('not going to happen');
+
+        newProject = updatedProject;
+        newProject.category = category;
+
+        newProject ? updateProject(newProject._id, newProject) : console.log('no go');
+
+        loadProjects();
+}
 
     return (
         <div className="Board">
@@ -48,41 +67,51 @@ function Board() {
                 <div className="colum-box">
                     <h2>Dream</h2>
                 </div>
+                <div onDragEnter={(e) => {handleDragEnter('dream')}} >
                 <Column category='dream' 
                         projects={projects}
                         handleOnDragStart={ handleDragStart }
-                        handleOnDrop={() => handleOnDrop('dream')}
+                        handleOnDrop={() => handleOnDrop('dream')}          
                 />
+                </div>
+                
+                
             </div>
             <div>
                 <div className="colum-box">
                     <h2>Coming Soon</h2>
                 </div>
+                <div onDragEnter={(e) => {handleDragEnter('comingSoon')}} >
                 <Column category='comingSoon' 
                         projects={projects}
                         handleOnDragStart={ handleDragStart }
                         handleOnDrop={() => handleOnDrop('comingSoon')}
                 />
+                </div>
             </div>
             <div>
                  <div className="colum-box">
                     <h2>Urgent</h2>
                 </div>
+                <div onDragEnter={(e) => {handleDragEnter('urgent')}} >
                 <Column category='urgent' 
                         projects={projects}
                         handleOnDragStart={ handleDragStart }
                         handleOnDrop={() => handleOnDrop('urgent')}
                 />
+                </div>
             </div>
             <div>
                 <div className="colum-box">
                     <h2>In Progress</h2>
                 </div>
+                <div onDragEnter={(e) => {handleDragEnter('inProgress')}} >
                 <Column category='inProgress' 
                         projects={projects}
                         handleOnDragStart={ handleDragStart }
                         handleOnDrop={() => handleOnDrop('inProgress')}
                 />
+                </div>
             </div>
             
             
