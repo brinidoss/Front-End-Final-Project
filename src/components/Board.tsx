@@ -20,6 +20,10 @@ function Board() {
         setUpdatedProject(project);
     }
 
+    function handleDragOver():void {
+        console.log('beep');
+    }
+
     function handleOnDrop(category: string): void {
         let newProject: any = '';
         setUpdatedCategory(category);
@@ -52,6 +56,7 @@ function Board() {
                         projects={projects}
                         handleOnDragStart={ handleDragStart }
                         handleOnDrop={() => handleOnDrop('dream')}
+                        //handleOnDragOver={ handleDragOver }
                 />
             </div>
             <div>
@@ -62,6 +67,7 @@ function Board() {
                         projects={projects}
                         handleOnDragStart={ handleDragStart }
                         handleOnDrop={() => handleOnDrop('comingSoon')}
+                        //handleOnDragOver={ handleDragOver }
                 />
             </div>
             <div>
@@ -72,6 +78,7 @@ function Board() {
                         projects={projects}
                         handleOnDragStart={ handleDragStart }
                         handleOnDrop={() => handleOnDrop('urgent')}
+                        //handleOnDragOver={ handleDragOver }
                 />
             </div>
             <div>
@@ -82,6 +89,7 @@ function Board() {
                         projects={projects}
                         handleOnDragStart={ handleDragStart }
                         handleOnDrop={() => handleOnDrop('inProgress')}
+                        //handleOnDragOver={ handleDragOver }
                 />
             </div>
             

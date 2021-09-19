@@ -11,7 +11,7 @@ function Form({ onAdd }: Props) {
   const [ name, setName ] = useState("");
   const [ description, setDescription ] = useState("");
   const [ label, setLabel ] = useState("");
-  const [ category, setCategory ] = useState("");
+  const [ category, setCategory ] = useState("dream");
   //const [ priority, setPriority ] = useState(0);
   const [ outdoor, setOutdoor ] = useState(false);
   const [ completed, setCompleted ] = useState(false);
@@ -29,7 +29,7 @@ function Form({ onAdd }: Props) {
     setName("");
     setDescription("");
     setLabel("none");
-    setCategory("");
+    setCategory("dream");
     //setPriority(0);
     setCompleted(false);
     setOutdoor(false);
