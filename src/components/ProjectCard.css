@@ -50,4 +50,26 @@
   background-color: cornflowerblue;
 
 }
+.none {
+	background-color: rgb(245, 203, 209);
+}
+.living {
+	background-color: plum;
+}
+.bath{
+	background-color: cornflowerblue;
+}
+.kitchen{
+	background-color: palevioletred;
+}
+.bedroom {
+	background-color: palegoldenrod;
+}
+.basement {
+	background-color: paleturquoise;
+}
+.office {
+	background-color: palegreen;
+}
+
 

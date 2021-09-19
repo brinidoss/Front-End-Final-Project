@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Project from '../model/Project'
 import './ProjectCard.css';
 
@@ -30,23 +30,59 @@ function ProjectCard({project, index }: Props) {
         //console.log(dropzone);
 
    }
-   let dreamCard = '';
-   let soon = '';
-   let urgent = '';
-   let inProgress = '';
+//    let dreamCard = '';
+//    let soon = '';
+//    let urgent = '';
+//    let inProgress = '';
 
-   if(project.category === 'dream'){
-       dreamCard = 'dream'
-   }
-   else if(project.category === 'comingSoon'){
-        soon = 'soon'
-   }
-   else if(project.category === 'urgent'){
-    soon = 'urgent'
+//    if(project.label === 'none'){
+//        dreamCard = 'none'
+//    }
+//    else if(project.category === 'comingSoon'){
+//         soon = 'soon'
+//    }
+//    else if(project.category === 'urgent'){
+//     soon = 'urgent'
+//     }
+//     else if(project.category === 'inProgress'){
+//     soon = 'progress'
+// }
+let styleCard: string = '';
+
+const handleCardStyle = () => {
+    switch (project.label){
+        case ('none'):
+            styleCard = 'none';
+            break;
+        case ('kitchen'):
+            styleCard = 'kitchen';
+            break;
+        case ('bath'):
+            styleCard = 'bath';
+            break;
+        case ('bedroom'):
+            styleCard = 'bedroom';
+            break;
+        case ('basement'):
+            styleCard = 'basement';
+            break;
+        case ('office'):
+            styleCard = 'office';
+            break;
+        case ('living'):
+            styleCard = 'living';
+            break;
     }
-    else if(project.category === 'inProgress'){
-    soon = 'progress'
+    return styleCard;
 }
+// useEffect(() =>{
+//     handleCardStyle()
+// }, []);
+// tried putting in use effect and no luck
+
+handleCardStyle();
+
+
 
 
    
@@ -54,7 +90,7 @@ function ProjectCard({project, index }: Props) {
 
     return (
         <div className="ProjectCard">
-            <div className={`ProjectCard__card draggable ${dreamCard} ${soon} ${urgent} ${inProgress}`} draggable='true'
+            <div className={`ProjectCard__card draggable ${styleCard}`} draggable='true'
             onDragStart={(e) => handleDragStart(e)}
             onDragEnd={() => console.log('hmm')}
             onDragOver={(e) => e.preventDefault()}

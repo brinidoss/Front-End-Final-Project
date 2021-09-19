@@ -14,9 +14,7 @@ function Board() {
                 <Column category='dream' />
             </div>
             <div>
-                <div className="colum-box">
-
-                </div>
+                
                 <div className="colum-box">
                     <h2>Coming Soon</h2>
                 </div>

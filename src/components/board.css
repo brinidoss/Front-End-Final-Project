@@ -13,6 +13,8 @@
     border-radius: 10px;
     width: 82%;
     margin-left: 8%;
+    border: solid 1px;
+    border-color: black;
 }
 h2 {
     margin: 0;
