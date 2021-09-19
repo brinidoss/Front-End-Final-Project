@@ -63,13 +63,14 @@ handleCardStyle();
 
 return (
         <div className="ProjectCard">
-            <div className={`ProjectCard__card draggable ${styleCard}`} draggable='true'
+            <div className={`ProjectCard__card draggable ${styleCard}`} 
+            draggable
             onDragStart={ handleOnDragStart }
             onDragOver={(e) => e.preventDefault()}
             
             >
 
-                <p>{project.name}</p>
+                <p className="project-name">{project.name}</p>
                 
                 <div className="btn-container">
                     <button className="editBtn">Edit</button>

@@ -40,7 +40,7 @@ function Column({category, handleOnDragStart, handleOnDrop, projects}: Props) {
 
     return (
         <div className="Column"
-           onDrop={ handleOnDrop }
+           onDragEnter={ handleOnDrop }
            //onDragOver={ handleOnDragOver }
         >
 

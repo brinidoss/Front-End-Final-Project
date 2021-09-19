@@ -109,6 +109,19 @@ function Board() {
                 />
                 </div>
             </div>
+            <div>
+                <div className="colum-box">
+                    <h2>Complete</h2>
+                </div>
+                <div onDragEnter={(e) => {handleDragEnter('complete')}} className="complete">
+                <Column category='complete' 
+                        projects={projects}
+                        handleOnDragStart={ handleDragStart }
+                        handleOnDrop={() => handleOnDrop('complete')}
+                        //handleOnDragOver={ handleDragOver }
+                />
+                </div>
+            </div>
             
             
             

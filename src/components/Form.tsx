@@ -57,6 +57,7 @@ function Form({ onAdd }: Props) {
               <option value="comingSoon">Coming Soon</option>
               <option value="urgent">Urgent</option>
               <option value="inProgress">In Progress</option>
+              <option value="complete">Complete</option>
 
             </select>
             

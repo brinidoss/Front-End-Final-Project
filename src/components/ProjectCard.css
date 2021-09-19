@@ -4,8 +4,14 @@
   margin: 5px;
   background-color: white;
   cursor: move;
-  width: 200px;
+  width: 150px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-name {
+	flex: 1;
 }
 
 .draggable.dragging {
