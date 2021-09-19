@@ -20,16 +20,7 @@ function Board() {
     function handleDragStart(project: Project): void {
         setUpdatedProject(project);
     }
-<<<<<<< HEAD
-
-    function handleDragOver():void {
-        console.log('beep');
-    }
-
-    function handleOnDrop(category: string): void {
-=======
      function handleOnDrop(category: string): void {
->>>>>>> 4c6d3142690a18782b0d36f23950978397e90d2a
         let newProject: any = '';
         setUpdatedCategory(category);
         // updatedProject ? 
@@ -53,15 +44,7 @@ function Board() {
         console.log('entering')
         let newProject: any = '';
         setUpdatedCategory(category);
-        // updatedProject ? 
-        // setUpdatedProject(prevUpdatedProject => ({   <== so pretty to look at,
-        //     updatedProject: {                            but it doesn't work :(
-        //         ...prevUpdatedProject,                   how you set state of 
-        //         category: updatedCategory                a property of an object
-        //     }
-        // }))
-        // : console.log('not going to happen');
-
+        
         newProject = updatedProject;
         newProject.category = category;
 
@@ -80,12 +63,8 @@ function Board() {
                 <Column category='dream' 
                         projects={projects}
                         handleOnDragStart={ handleDragStart }
-<<<<<<< HEAD
                         handleOnDrop={() => handleOnDrop('dream')}
                         //handleOnDragOver={ handleDragOver }
-=======
-                        handleOnDrop={() => handleOnDrop('dream')}          
->>>>>>> 4c6d3142690a18782b0d36f23950978397e90d2a
                 />
                 </div>
                 
