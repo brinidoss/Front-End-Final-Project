@@ -4,7 +4,7 @@ export default interface Project {
     label?: string;
     category?: string;
     priority?: number;
-    _id?: string;
+    _id?: string | undefined;
     outdoor?: boolean;
     completed?: boolean;
     user?: any;

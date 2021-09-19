@@ -26,7 +26,7 @@ export function fetchProjectsTo(user: string) : Promise<Project[]> {
 //   .then(res => res.data)
 // }
 
-export function updateProject(id: string, updatedProject: Project) : Promise<Project[]> {
+export function updateProject(id: string | undefined, updatedProject: Project) : Promise<Project[]> {
   return axios.put(`${baseUrl}/${id}`, updatedProject)
   .then(res => res.data)
 }
