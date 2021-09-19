@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react";
 import { useAuthUser } from "../Context/auth-context";
 import Project from "../model/Project";
 import { addProject } from "../services/ProjectService";
+import "./Form.css";
 
 interface Props {
   onAdd?: (project: Project) => void
@@ -10,7 +11,7 @@ interface Props {
 function Form({ onAdd }: Props) {
   const [ name, setName ] = useState("");
   const [ description, setDescription ] = useState("");
-  const [ label, setLabel ] = useState("");
+  const [ label, setLabel ] = useState("none");
   const [ category, setCategory ] = useState("dream");
   //const [ priority, setPriority ] = useState(0);
   const [ outdoor, setOutdoor ] = useState(false);

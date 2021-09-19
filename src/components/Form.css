@@ -1,0 +1,17 @@
+.ProjectForm {
+  display: flex;
+  flex-direction: column;
+  background-color: olive;
+  height: 500px;
+  width: 50vw;
+  justify-content: space-between;
+}
+
+.ProjectForm h3 {
+  font-size: 30px;
+  background-image: url(../images/tape-measure.jpg);
+  background-size: 870px;
+  background-position: 100px;
+  margin: 0px;
+  padding: 30px 0px 30px 0px;
+}
