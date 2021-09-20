@@ -11,15 +11,26 @@ function Board() {
     const [updatedProject, setUpdatedProject] = useState<Project>();
     const [updatedCategory, setUpdatedCategory] = useState<string>('');
 
+    //create a new function that uses the services fetchProjects to set the state of the projects array
     function loadProjects() {
         fetchProjects().then(setProjects);
     }
 
+    //calls the above function when the component first renders
     useEffect(loadProjects, []);
 
+    //this function saves which project is being dragged so we know which one will be updated
     function handleDragStart(project: Project): void {
         setUpdatedProject(project);
     }
+    
+    // this function creates a new project that will be sent to the api with a put request to update the project 
+    //based on the new category, updated category is captured by setting the state over the column where it is dropped
+    //the category variable is taken from the prop passed down to Column.tsx from Board.tsx
+    //once we create the new project to send to the api and change its category based on the category it is dropped over
+    //we send the update to the api with the updateProject put request taken from services
+    //then we load projects again to make sure the data is updated
+    //card appears in new category because it has been updated in the database and the projects are filtered
      function handleOnDrop(category: string): void {
         let newProject: any = '';
         setUpdatedCategory(category);
@@ -40,6 +51,8 @@ function Board() {
         loadProjects();
         
     }
+
+    //this function shows the card appearing in a category before it is dropped
     function handleDragEnter(category: string) {
         console.log('entering')
         let newProject: any = '';
@@ -53,6 +66,7 @@ function Board() {
         loadProjects();
 }
 
+//calculating the lengths of the arrays to show stats for how many projects are in each category
 const handleDreamFilter = () => {
     return projects.filter(x => x.category === 'dream').length
 }
@@ -87,6 +101,10 @@ let complete = handleCompleteFilter();
     let progressPercent:number = Math.round((progress/ projects.length) * 100) / 100 * 100 ? Math.round((progress / projects.length) * 100) / 100 * 100 : 0;
     let completePercent: number = Math.round((complete / projects.length) * 100) / 100 * 100 ? Math.round((complete / projects.length) * 100) / 100 * 100 : 0;
     
+//down below we are reusing the Column component for each category and passing the unique category down as a prop
+//child components are passing back up the data we need to determine specific projects and categories that
+//are being interacted with through the handle functions
+
     return (
         <div className="Board">
             <div>
@@ -183,18 +201,9 @@ let complete = handleCompleteFilter();
                         <div className="stat-sheet" style={{width: `${completePercent}%`, backgroundColor: `green`} }>{complete} </div> 
                     </div>
                 
-                
-                
-                
-                
-                </div>
-                
+                </div>  
                 
             </div>
-            
-            
-            
-            
             
         </div>
     )

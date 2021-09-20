@@ -18,7 +18,7 @@ function Landing() {
     const user = useAuthUser();
 
     return(
-        <div className="parent">
+        <div className="LandingPage">
                 {/* <NavLink to="/HomePage">Dashboard</NavLink>
                 <NavLink to="/Board">View Projects</NavLink> */}
             <h1 className="firstLine">Every home tells a story...</h1>

@@ -8,6 +8,7 @@ import Form from './components/Form';
 import { AuthContextProvider } from './Context/auth-context';
 import Board from './components/Board';
 import Footer from './components/Footer';
+import ProjectDescription from './components/ProjectDescription';
 
 //import TestProject from './components/TestProjects';
 
@@ -34,6 +35,9 @@ function App() {
               </Route>
               <Route path="/Board" exact>
                 <Board/>
+              </Route>
+              <Route path="/Board/:id" exact>
+                <ProjectDescription />
               </Route>
               
             </Switch>

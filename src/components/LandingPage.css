@@ -1,23 +1,26 @@
 .parent {
-    background-color: #3c5b74;
-    text-align: center;
+  background-color: #3c5b74;
+  text-align: center;
+}
+
+.LandingPage {
+  display: flex;
+  flex-direction: column;
 }
 
 .firstLine {
-font-family: fantasy; 
-font-size: 70px;
-padding-top: 50px;
-color: #00243f;
+  font-family: fantasy;
+  font-size: 70px;
+  padding-top: 50px;
+  color: #00243f;
 }
 
 .secondLine {
-    font-family: monospace;
-    font-size: 50px;
-    color: #b67929;
+  font-family: monospace;
+  font-size: 50px;
+  color: #b67929;
 }
 
-
-
 img {
-    padding-top: 25px
+  padding-top: 25px;
 }

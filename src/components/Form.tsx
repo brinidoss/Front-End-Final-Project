@@ -19,6 +19,9 @@ function Form({ onAdd }: Props) {
 
   const user: any = useAuthUser();
 
+  //uses addProject from services to do a post request to the api using the state of the above 
+  //to determine the values being sent to the database
+  //then we reset the form
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
 

@@ -12,33 +12,12 @@ interface Props {
 }
 
 
-
-
-
 function Column({category, handleOnDragStart, handleOnDrop, projects}: Props) {
 
-    // const [collapse, setCollapse] = useState<Boolean>(true);
-    // const [height, setHeight] = useState<String>('min');
-
-    // const columnParentDiv:any = document.querySelector<Element>('.Column');
-
-    // function handleOnDragOver(): void {
-    //     // setCollapse(!collapse);
-    //     // console.log(collapse);
-    //    console.log('hello there');
-    //     console.log(columnParentDiv.hasChildNodes());
-    //     console.log(projects.filter(project => project.category === category).length);
- 
-
-    //     // if (height === "min") {
-    //     //     setHeight('max'); 
-    //     // } else {
-    //     //     setHeight('min');
-    //     // }
-    // }
-    
-
-
+//this stage is responsible for retrieving the data for the drop handle function 
+//we're targeting the category that a card is hovering over/ being dropped over
+//this is also where we filter the projects array from the parent Board component and splitting it into separate 
+//arrays based on category, then we map the individual projects as ProjectCard components
     return (
         <div className="Column"
            onDragEnter={ handleOnDrop }
