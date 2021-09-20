@@ -36,6 +36,7 @@ function Column({category, handleOnDragStart, handleOnDrop, projects}: Props) {
     //     //     setHeight('min');
     //     // }
     // }
+    
 
 
     return (
@@ -50,6 +51,7 @@ function Column({category, handleOnDragStart, handleOnDrop, projects}: Props) {
                 project={project}
                 index={index}
                 handleOnDragStart={() => handleOnDragStart(project)}
+                
             />
             )}
         </div>

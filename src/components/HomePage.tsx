@@ -12,7 +12,7 @@ function HomePage() {
             </div>
             <div className="test-btn">
                <div className="brdbtn">
-            <NavLink to="/Test"> <button className="boardBtn">Go to Board</button></NavLink>
+            <NavLink to="/Board"> <button className="boardBtn">Go to Board</button></NavLink>
             </div> 
             <div className="projbtn">
             <NavLink to="/Form"> <button className="ProjectBtn">New Project</button></NavLink>

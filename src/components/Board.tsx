@@ -53,6 +53,40 @@ function Board() {
         loadProjects();
 }
 
+const handleDreamFilter = () => {
+    return projects.filter(x => x.category === 'dream').length
+}
+const handleSoonFilter = () => {
+    return projects.filter(x => x.category === 'comingSoon').length
+}
+const handleUrgentFilter = () => {
+    return projects.filter(x => x.category === 'urgent').length
+}
+const handleProgressFilter = () => {
+    return projects.filter(x => x.category === 'inProgress').length
+}
+const handleCompleteFilter = () => {
+    return projects.filter(x => x.category === 'complete').length
+}
+useEffect(() =>{
+    handleDreamFilter();
+    handleSoonFilter();
+    handleUrgentFilter();
+    handleProgressFilter();
+    handleCompleteFilter();
+
+}, [projects])
+let dreams = handleDreamFilter();
+let soon = handleSoonFilter();
+let urgent = handleUrgentFilter();
+let progress = handleProgressFilter();
+let complete = handleCompleteFilter();
+    let dreamPercent:number = Math.round((dreams / projects.length) * 100) / 100 * 100 ? Math.round((dreams / projects.length) * 100) / 100 * 100 : 0;
+    let soonPercent: number = Math.round((soon / projects.length) * 100) / 100 * 100 ? Math.round((soon / projects.length) * 100) / 100 * 100 : 0;
+    let urgentPercent: number = Math.round((urgent/ projects.length) * 100) / 100 * 100 ? Math.round((urgent / projects.length) * 100) / 100 * 100 : 0;
+    let progressPercent:number = Math.round((progress/ projects.length) * 100) / 100 * 100 ? Math.round((progress / projects.length) * 100) / 100 * 100 : 0;
+    let completePercent: number = Math.round((complete / projects.length) * 100) / 100 * 100 ? Math.round((complete / projects.length) * 100) / 100 * 100 : 0;
+    
     return (
         <div className="Board">
             <div>
@@ -66,6 +100,7 @@ function Board() {
                         handleOnDrop={() => handleOnDrop('dream')}
                         //handleOnDragOver={ handleDragOver }
                 />
+                
                 </div>
                 
                 
@@ -121,6 +156,40 @@ function Board() {
                         //handleOnDragOver={ handleDragOver }
                 />
                 </div>
+            </div>
+
+
+            <div>
+                <h2>Stats</h2>
+                <div className ="stat-area">
+                    <div>
+                        <p className="stat-label">Dream</p>
+                        <div className="stat-sheet" style={{width: `${dreamPercent}%`, backgroundColor: `blueviolet`} }>{dreams} </div>
+                    </div>
+                    <div>
+                        <p className="stat-label">Coming Soon</p>
+                        <div className="stat-sheet" style={{width: `${soonPercent}%`, backgroundColor: `yellow`} }>{soon} </div>
+                    </div>
+                    <div>
+                        <p className="stat-label">Urgent</p>
+                        <div className="stat-sheet" style={{width: `${urgentPercent}%`, backgroundColor: `red`} }>{urgent} </div>
+                    </div>
+                    <div>
+                        <p className="stat-label">In Progress</p>
+                        <div className="stat-sheet" style={{width: `${progressPercent}%`, backgroundColor: `orange`} }>{progress} </div>
+                    </div>
+                    <div>
+                        <p className="stat-label">Complete</p>
+                        <div className="stat-sheet" style={{width: `${completePercent}%`, backgroundColor: `green`} }>{complete} </div> 
+                    </div>
+                
+                
+                
+                
+                
+                </div>
+                
+                
             </div>
             
             

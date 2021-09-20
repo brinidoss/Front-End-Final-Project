@@ -5,9 +5,10 @@ export interface Props {
     project: Project;
     index: number;
     handleOnDragStart: () => void;
+    
 }
 
-function ProjectCard({project, index, handleOnDragStart }: Props) {
+function ProjectCard({project, index, handleOnDragStart}: Props) {
 
 //    let dreamCard = '';
 //    let soon = '';
