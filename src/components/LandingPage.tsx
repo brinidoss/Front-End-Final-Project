@@ -5,7 +5,7 @@ import './LandingPage.css';
 import { useAuthUser } from "../Context/auth-context";
 import firebase from "../firebaseConfig";
 import SignInButton from "./SignInButton";
-import Footer from "./Footer";
+
 
 
 function Landing() {
@@ -36,7 +36,7 @@ function Landing() {
             </div>
 
         <img src={HomeRenovationPix} alt="renovation pix"/>
-                 <Footer/>
+                 
             </div>
 
     );

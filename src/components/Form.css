@@ -6,6 +6,7 @@
 .ProjectForm {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background-color: peachpuff;
   height: 500px;
   min-width: 30vw;
@@ -27,6 +28,9 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   font-family: "Cabin Sketch";
+  min-width: 30vw;
+  max-width: 500px;
+  
 }
 
 .ProjectForm__button {

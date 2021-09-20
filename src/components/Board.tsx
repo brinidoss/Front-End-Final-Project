@@ -3,7 +3,7 @@ import Project from '../model/Project'
 import { fetchProjects, updateProject } from '../services/ProjectService';
 import Column from './Column'
 import './board.css';
-import { count } from 'console';
+
 
 function Board() {
 
