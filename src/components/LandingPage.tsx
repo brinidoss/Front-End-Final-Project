@@ -40,7 +40,7 @@ function Landing() {
             <h1 className="firstLine">Every home tells a story...</h1>
             <h1 className="secondLine">Let us help add another chapter to yours.</h1>
 
-            <button className="landingBtn">Join Here</button>
+           
 
         
 

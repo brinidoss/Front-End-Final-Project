@@ -6,7 +6,7 @@ function signIn() {
 
 function SignInButton() {
   return (
-    <button className="SignInButton" onClick={signIn}>Sign in with Google</button>
+    <button className="SignInButton" onClick={signIn}>Join Here</button>
   );
 }
 

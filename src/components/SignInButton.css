@@ -1,0 +1,12 @@
+.SignInButton {
+display: flex;
+margin: auto;
+justify-content: center;
+padding-top: 15px;
+color: white;
+background-color: #00243f;
+width: 150px;
+height: 50px;
+font-weight: 800;
+font-size: larger;
+}
