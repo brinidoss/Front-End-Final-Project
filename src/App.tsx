@@ -7,6 +7,7 @@ import HomePage from '../src/components/HomePage';
 import Form from './components/Form';
 import { AuthContextProvider } from './Context/auth-context';
 import Board from './components/Board';
+import Footer from './components/Footer';
 
 //import TestProject from './components/TestProjects';
 

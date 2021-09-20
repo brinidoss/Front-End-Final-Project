@@ -5,6 +5,7 @@ import './LandingPage.css';
 import { useAuthUser } from "../Context/auth-context";
 import firebase from "../firebaseConfig";
 import SignInButton from "./SignInButton";
+import Footer from "./Footer";
 
 
 function Landing() {
@@ -18,34 +19,25 @@ function Landing() {
 
     return(
         <div className="parent">
-            <div className="login-container">
-                {/* <input type="text" placeholder="Username" name="username"></input>
-                <input type="text" placeholder="Password" name="password"></input>
-                <button type="submit">Login</button> */}
-                
-                { user ?
-          <>
-            {user.displayName} {' '}
-            (<Link to="/me">My Shoutouts</Link>) {' '}
-            <button onClick={logout}>Sign Out</button>
-          </> :
-          <SignInButton />
-        }
-
-
-
-                <NavLink to="/HomePage">Home Page</NavLink>
-                <NavLink to="/Board">Go to Test Board</NavLink>
-            </div>
+                {/* <NavLink to="/HomePage">Dashboard</NavLink>
+                <NavLink to="/Board">View Projects</NavLink> */}
             <h1 className="firstLine">Every home tells a story...</h1>
             <h1 className="secondLine">Let us help add another chapter to yours.</h1>
-
-           
-
         
+            <div className="login-container"> 
+                { user ?
+            <>
+              {user.displayName} {' '}
+              (<Link to="/me">My Projects</Link>) {' '}
+              <button onClick={logout}>Sign Out</button>
+              </> :
+                <SignInButton />
+                }
+            </div>
 
         <img src={HomeRenovationPix} alt="renovation pix"/>
-        </div>
+                 <Footer/>
+            </div>
 
     );
 }

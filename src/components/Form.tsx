@@ -37,34 +37,35 @@ function Form({ onAdd }: Props) {
   }
 
   return (
+    <div className="centering-div">
     <form className="ProjectForm" onSubmit={handleSubmit}>
       <h3>Add a Project</h3>
      
         <div className="ProjectForm__option  nameOption">
-            <label htmlFor="ProjectForm__name">Project Name</label>
-            <input type="text" id="ProjectForm__name" value={name} required minLength={2} onChange={e => setName(e.target.value)} />
+            {/* <label htmlFor="ProjectForm__name">Project Name</label> */}
+            <input className="ProjectForm__input" type="text" id="ProjectForm__name" placeholder="Project Name" value={name} required minLength={2} onChange={e => setName(e.target.value)} />
         </div>
 
         <div className="ProjectForm__option descriptionOption">
-            <label htmlFor="ProjectForm__description">Description</label>
-            <textarea id="ProjectForm__description" value={description}  onChange={e => setDescription(e.target.value)} rows={4}/>
+            {/* <label htmlFor="ProjectForm__description">Description</label> */}
+            <textarea className="ProjectForm__input" id="ProjectForm__description" placeholder="Project Description" value={description}  onChange={e => setDescription(e.target.value)} rows={4}/>
         </div>
 
         <div className="ProjectForm__option categoryOption">
-            <label htmlFor="category">Category</label>
-            <select id="category" name="category" onChange={ (e) => setCategory(e.target.value) }>
+            {/* <label htmlFor="category">Category</label> */}
+            <select className="ProjectForm__input" id="category" name="category" onChange={ (e) => setCategory(e.target.value) } required>
+              <option value="" disabled selected hidden>Select a Category</option>
               <option value="dream">Dream Project</option>
               <option value="comingSoon">Coming Soon</option>
               <option value="urgent">Urgent</option>
               <option value="inProgress">In Progress</option>
               <option value="complete">Complete</option>
-
             </select>
             
         </div>
 
         <div className="ProjectForm__option labelOption">
-            <p>Label</p>
+            {/* <p>Label</p> */}
             <input type="radio" name="label" id="none" value="none" onChange={ (e) => setLabel(e.target.value) }/>
             <label htmlFor="none">None</label>
             <input type="radio" name="label" id="kitchen" value="kitchen" onChange={ (e) => setLabel(e.target.value) }/>
@@ -92,7 +93,7 @@ function Form({ onAdd }: Props) {
         </div> */}
 
         <div className="ProjectForm__option outdoorOption">
-            <p>Indoor or Outdoor</p>
+            {/* <p>Indoor or Outdoor</p> */}
             <input type="radio" name="inOrOut" id="indoor" onChange={ (e) => setOutdoor(false) }/>
             <label htmlFor="indoor">Indoor</label>
             <input type="radio" name="inOrOut" id="outdoor" onChange={ (e) => setOutdoor(true) }/>
@@ -100,9 +101,10 @@ function Form({ onAdd }: Props) {
         </div>
 
         <div>
-            <button>Submit</button>
+            <button className="ProjectForm__button">Submit</button>
         </div>
     </form>
+    </div>
   );
 }
 
