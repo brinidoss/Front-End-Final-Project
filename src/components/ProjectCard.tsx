@@ -53,8 +53,8 @@ handleCardStyle();
 //we also create a link to the project description based on the id
 
 return (
-        <div className="ProjectCard">
-            <div className={`ProjectCard__card draggable ${styleCard}`} 
+        <div className={`ProjectCard`}>
+            <div className={`ProjectCard__card draggable ${styleCard} ${project.outdoor? `outdoor`: `indoor`}`} 
             draggable
             onDragStart={ handleOnDragStart }
             onDragOver={(e) => e.preventDefault()}
