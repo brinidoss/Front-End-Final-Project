@@ -13,12 +13,14 @@
   font-size: 70px;
   padding-top: 50px;
   color: #00243f;
+  text-align: center;
 }
 
 .secondLine {
   font-family: monospace;
   font-size: 50px;
   color: #b67929;
+  text-align: center;
 }
 
 img {
