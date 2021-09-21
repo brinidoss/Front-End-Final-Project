@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Project from "../model/Project";
-import { fetchProjects } from "../services/ProjectService";
+import { deleteProject, fetchProjects } from "../services/ProjectService";
 import './ProjectDescription.css';
 
 
@@ -14,6 +14,11 @@ function ProjectDescription() {
     const [projects, setProjects] = useState<Project[]>([]);
     const { id } = useParams<RouteParams>();
     
+    function handleDelete(_id: any) {
+        deleteProject(_id);
+
+
+    }
     //fetch projects using the function from services again
     function loadProjects() {
         fetchProjects().then(setProjects);
@@ -30,6 +35,8 @@ function ProjectDescription() {
                 <h2>{foundProject?.name}</h2>
                 <p>{foundProject?.label}</p>
                 <p>{foundProject?.description}</p>
+
+                <button onClick={()=>handleDelete(foundProject?._id)}>Delete</button>
             </div>    
         </div>
     )

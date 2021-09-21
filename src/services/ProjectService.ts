@@ -14,6 +14,10 @@ export function addProject(project:Project) : Promise<Project> {
   return axios.post(`${baseUrl}`, project).then(res => res.data);
 }
 
+export function deleteProject(id: string) : Promise<Project> {
+  return axios.delete(`${baseUrl}/${id}`).then(res => res.data);
+} 
+
 export function fetchProjectsTo(user: string) : Promise<Project[]> {
   return axios.get(`${baseUrl}`, {
     params: { to: user }

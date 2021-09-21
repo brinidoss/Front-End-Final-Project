@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../components/HomePage.css"
-import Graph from '../images/Graph.png';
 import Project from "../model/Project";
 import { fetchProjects } from "../services/ProjectService";
 
