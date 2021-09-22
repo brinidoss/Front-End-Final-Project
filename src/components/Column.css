@@ -2,7 +2,8 @@
   border: solid black 2px;
   padding: 10px;
   margin: 0px 10px 10px 10px;
-  background-color: rgb(226, 167, 128);
+  background-color: #22161c;
+  /* background-color: rgb(226, 167, 128); */
   /* background-image: url("../images/houses.jpg"); */
   background-size: cover;
   width: 70%;

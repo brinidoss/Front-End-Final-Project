@@ -26,6 +26,7 @@ h2 {
 }
 .complete {
     text-decoration: line-through;
+    text-decoration-color: red;
    
 }
 .stat-sheet{
