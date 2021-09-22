@@ -7,7 +7,9 @@ export default interface Project {
     _id?: string | undefined;
     outdoor?: boolean;
     completed?: boolean;
-    user?: any;
+    user?: {
+        uid?: any;
+    }
 }
 
 // export default interface Project {

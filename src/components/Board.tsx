@@ -3,9 +3,13 @@ import Project from '../model/Project'
 import { fetchProjects, updateProject } from '../services/ProjectService';
 import Column from './Column'
 import './board.css';
+import { useAuthUser } from '../Context/auth-context';
 
 
 function Board() {
+
+    //me trying to figure this out - not from Kyle
+    const user = useAuthUser();
 
     const [projects, setProjects] = useState<Project[]>([]);
     const [updatedProject, setUpdatedProject] = useState<Project>();
@@ -14,10 +18,21 @@ function Board() {
     //create a new function that uses the services fetchProjects to set the state of the projects array
     function loadProjects() {
         fetchProjects().then(setProjects);
+
+        if (user) {
+            let userProjects = projects.filter(project => project.user?.uid === user.uid);
+            setProjects(userProjects);
+            console.log(user);
+            console.log(user.uid);
+            console.log(projects);
+            //console.log(projects[11].user?.uid);
+        }
+
+
     }
 
     //calls the above function when the component first renders
-    useEffect(loadProjects, []);
+    useEffect(loadProjects, [projects, user]);
 
     //this function saves which project is being dragged so we know which one will be updated
     function handleDragStart(project: Project): void {

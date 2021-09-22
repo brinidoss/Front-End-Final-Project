@@ -14,7 +14,7 @@ function Landing() {
         firebase.auth().signOut();
       }
       
-    //grabs use who is logged in
+    //grabs user who is logged in
     const user = useAuthUser();
 
     return(
@@ -27,9 +27,9 @@ function Landing() {
             <div className="login-container"> 
                 { user ?
             <>
-              {user.displayName} {' '}
-              (<Link to="/me">My Projects</Link>) {' '}
-              <button onClick={logout}>Sign Out</button>
+              {user.displayName} {' '}     
+              (<Link to="/HomePage">My Projects</Link>) {' '}   
+              <button id="LandingPage__logoutButton" onClick={logout}>Sign Out</button>
               </> :
                 <SignInButton />
                 }
