@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import "../components/HomePage.css"
 import Project from "../model/Project";
 import { fetchProjects } from "../services/ProjectService";
+import NewProject from "../images/NewProject.png";
+import ProjectBoard from "../images/ProjectBoard.png";
+
 
 
 function HomePage() {
@@ -82,15 +85,17 @@ function HomePage() {
             </div>
             <div className="test-btn">
                <div className="brdbtn">
-            <NavLink to="/Board"> <button className="boardBtn">Go to Board</button></NavLink>
+            <NavLink to="/Board"><img className="homepage1" src={ProjectBoard} alt="project board pix"/></NavLink>
+            {/* <button className="boardBtn">Go to Board</button> */}
             </div> 
             <div className="projbtn">
-            <NavLink to="/Form"> <button className="ProjectBtn">New Project</button></NavLink>
-            </div>
-            </div>
+            <NavLink to="/Form"><img className="homepage" src={NewProject} alt="newproject pix"/></NavLink>
             
-        </div>
+            {/* <button className="ProjectBtn">New Project</button> */}
+            </div>
+            </div>
+        </div> 
     );
-}
+  }
 
 export default HomePage;

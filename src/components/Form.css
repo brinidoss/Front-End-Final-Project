@@ -1,6 +1,8 @@
 .centering-div {
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(to bottom right, #3c5b74, #a3acb1);
+  height: 100vh;
 }
 
 .ProjectForm {
@@ -19,6 +21,7 @@
 }
 
 .ProjectForm h3 {
+  text-align: center;
   font-size: 50px;
   background-image: url(../images/tape-measure.jpg);
   background-size: 870px;
@@ -31,6 +34,10 @@
   min-width: 30vw;
   max-width: 500px;
   
+}
+.ProjectForm__option {
+text-align: center;
+
 }
 
 .ProjectForm__button {

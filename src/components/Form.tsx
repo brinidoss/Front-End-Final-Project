@@ -76,7 +76,7 @@ function Form({ onAdd }: Props) {
             <input type="radio" name="label" id="bath" value="bath" onChange={ (e) => setLabel(e.target.value) }/>
             <label htmlFor="bath">Bath</label>
             <input type="radio" name="label" id="bedroom" value="bedroom" onChange={ (e) => setLabel(e.target.value) }/>
-            <label htmlFor="bedroom">Bedroom</label>
+            <label htmlFor="bedroom">Bedroom</label><br></br>
             <input type="radio" name="label" id="living" value="living" onChange={ (e) => setLabel(e.target.value) }/>
             <label htmlFor="living">Living Room</label>
             <input type="radio" name="label" id="basement" value="basement" onChange={ (e) => setLabel(e.target.value) }/>

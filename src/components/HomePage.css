@@ -2,8 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: baseline;
-
-    background-color: #a3acb1;
+    background-image: linear-gradient(to bottom right, #6e304b, #a3acb1);
     height: 100vh;
     width: 100vw;
     
@@ -56,3 +55,14 @@ div.stat-area-home{
     border-bottom: black solid;
     margin-bottom: 0;
 }
+
+.homepage1 {
+    width: 40vh;
+    height: 25vh;
+}
+
+.homepage {
+    width: 40vh;
+    height: 25vh;
+}
+

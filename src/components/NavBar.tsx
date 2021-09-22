@@ -6,9 +6,7 @@ import './NavBar.css';
 function NavBar() {
     
     return (
-
     <header className="Header">
-
         <nav className="Nav">
             <div className="Home">
                 <NavLink to="/" id="root-link">
