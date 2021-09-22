@@ -4,8 +4,10 @@ import Project from "../model/Project";
 // const baseUrl = "<URL FOR YOUR BACKEND API>";
 const baseUrl = 'https://us-central1-home-improv-projects.cloudfunctions.net/api/projects';
 
-export function fetchProjects() : Promise<Project[]> {
-  return axios.get(`${baseUrl}`)
+export function fetchProjects(uid: string) : Promise<Project[]> {
+  return axios.get(`${baseUrl}`, {
+    params: {uid: uid}
+  })
   .then(res => res.data)
   
 }
@@ -20,7 +22,7 @@ export function deleteProject(id: string) : Promise<Project> {
 
 export function fetchProjectsTo(user: string) : Promise<Project[]> {
   return axios.get(`${baseUrl}`, {
-    params: { to: user }
+    params: { user: user }
   })
   .then(res => res.data)
 }

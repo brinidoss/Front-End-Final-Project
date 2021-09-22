@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useAuthUser } from "../Context/auth-context";
 import Project from "../model/Project";
 import { deleteProject, fetchProjects } from "../services/ProjectService";
 import './ProjectDescription.css';
@@ -11,6 +12,7 @@ import './ProjectDescription.css';
 
 function ProjectDescription() {
 
+const user = useAuthUser();
     const [projects, setProjects] = useState<Project[]>([]);
     const { id } = useParams<RouteParams>();
     
@@ -21,7 +23,9 @@ function ProjectDescription() {
     }
     //fetch projects using the function from services again
     function loadProjects() {
-        fetchProjects().then(setProjects);
+        if (user?.uid) {
+            fetchProjects(user.uid).then(setProjects);
+        };
     }
 
     useEffect(loadProjects, []);

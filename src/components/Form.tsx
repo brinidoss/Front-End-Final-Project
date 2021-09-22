@@ -24,10 +24,12 @@ function Form({ onAdd }: Props) {
   //then we reset the form
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
+  
+    const uid = user.uid;
 
     addProject({
       
-      name, description, label, outdoor, completed, user, category
+      name, description, label, outdoor, completed, uid, category
 
     }).then(onAdd);
     setName("");

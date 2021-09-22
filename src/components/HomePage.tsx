@@ -5,10 +5,13 @@ import Project from "../model/Project";
 import { fetchProjects } from "../services/ProjectService";
 import NewProject from "../images/NewProject.png";
 import ProjectBoard from "../images/ProjectBoard.png";
-
+import { useAuthUser } from "../Context/auth-context";
 
 
 function HomePage() {
+
+
+const user = useAuthUser();
     const [projects, setProjects] = useState<Project[]>([]);
 
     const handleDreamFilter = () => {
@@ -45,10 +48,11 @@ function HomePage() {
         let progressPercent:number = Math.round((progress/ projects.length) * 100) / 100 * 100 ? Math.round((progress / projects.length) * 100) / 100 * 100 : 0;
         let completePercent: number = Math.round((complete / projects.length) * 100) / 100 * 100 ? Math.round((complete / projects.length) * 100) / 100 * 100 : 0;
 
-    function loadProjects() {
-        fetchProjects().then(setProjects);
-    }
-
+        function loadProjects() {
+            if (user?.uid) {
+                fetchProjects(user.uid).then(setProjects);
+            };
+        }
     useEffect(loadProjects, []);
 
 
