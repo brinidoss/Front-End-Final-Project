@@ -10,3 +10,10 @@
   margin-top: 20px;
   border-radius: 5px;
 }
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+
