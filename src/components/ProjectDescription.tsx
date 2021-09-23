@@ -17,9 +17,11 @@ const user = useAuthUser();
     const [updateName, setUpdateName] = useState(false);
     const [updateDesc, setUpdateDesc] = useState(false);
     const [updateCategory, setUpdateCategory] = useState(false);
+    const [updateLabel, setUpdateLabel] = useState(false);
     const [name, setName] = useState('');
     const [category, setCategory] = useState('');
     const [description, setDescription] = useState('');
+    const [label, setLabel] = useState('');
     const { id } = useParams<RouteParams>();
 
     
@@ -41,16 +43,19 @@ const user = useAuthUser();
         let updatedProject: any = foundProject;
 
         
-        updatedProject.name = name.length > 0 ? name : updatedProject?.name
-        updatedProject.description = description.length > 0 ? description : updatedProject?.name
-        updatedProject.category = category.length > 0 ? category : updatedProject?.name 
+        updatedProject.name = name.length > 0 ? name : updatedProject?.name;
+        updatedProject.description = description.length > 0 ? description : updatedProject?.description;
+        updatedProject.category = category.length > 0 ? category : updatedProject?.category;
+        updatedProject.label = label.length > 0 ? label : updatedProject?.label; 
         
         updateProject(updatedProject._id, updatedProject);
 
         loadProjects();
+    
         setUpdateName(false);
         setUpdateDesc(false);
         setUpdateCategory(false);
+        setUpdateLabel(false);
         console.log(name);
         console.log(updatedProject.name);
     }
@@ -60,6 +65,7 @@ const user = useAuthUser();
         setUpdateName(!updateName);
         setUpdateDesc(!updateDesc);
         setUpdateCategory(!updateCategory);
+        setUpdateLabel(!updateLabel);
         if(updateName === true){
             style = 'show';
         }
@@ -78,6 +84,12 @@ const user = useAuthUser();
         else {
             style = 'hidden';
         }
+        if (updateLabel === true ){
+            style = 'show';
+        }
+        else {
+            style = 'hidden';
+        }
     }
 
     useEffect(loadProjects, []);
@@ -89,7 +101,6 @@ const user = useAuthUser();
         <div className="ProjectDescription">
             <div className="ProjectDescription__Container">
                 <h2>{foundProject?.name}</h2>
-                <button onClick={()=> handleShowUpdate()}>Edit</button>
                 {updateName ? 
                 <form className={style}  onSubmit={handleUpdate}>
                     <input value={`${name}`} onChange={(e) => setName(e.target.value)} type="text"/>
@@ -99,11 +110,34 @@ const user = useAuthUser();
                 </form>
                 : console.log('nothing')
                 }
+                <button onClick={()=> handleShowUpdate()}>Edit</button>
                 
-
-        
-                <p>{foundProject?.label}</p>
-                <p>{foundProject?.description}</p>
+                
+                <p>Label: {label ? label : foundProject?.label}</p>
+                {updateLabel ? 
+                <form className="" onSubmit={handleUpdate} >
+                {/* <p>Label</p> */}
+                <input type="radio" name="label" id="none" value="none" onChange={ (e) => setLabel(e.target.value) }/>
+                <label htmlFor="none">None</label>
+                <input type="radio" name="label" id="kitchen" value="kitchen" onChange={ (e) => setLabel(e.target.value) }/>
+                <label htmlFor="kitchen">Kitchen</label>
+                <input type="radio" name="label" id="bath" value="bath" onChange={ (e) => setLabel(e.target.value) }/>
+                <label htmlFor="bath">Bath</label>
+                <input type="radio" name="label" id="bedroom" value="bedroom" onChange={ (e) => setLabel(e.target.value) }/>
+                <label htmlFor="bedroom">Bedroom</label><br></br>
+                <input type="radio" name="label" id="living" value="living" onChange={ (e) => setLabel(e.target.value) }/>
+                <label htmlFor="living">Living Room</label>
+                <input type="radio" name="label" id="basement" value="basement" onChange={ (e) => setLabel(e.target.value) }/>
+                <label htmlFor="basement">Basement</label>
+                <input type="radio" name="label" id="office" value="office" onChange={ (e) => setLabel(e.target.value) }/>
+                <label htmlFor="office">Home Office</label>
+                <button>Update</button>
+            
+            </form>
+            : console.log('nope')
+            
+                }
+                <p>Description: {description ? description : foundProject?.description}</p>
                 {updateDesc ? 
                 <form className={style}  onSubmit={handleUpdate}>
                     <input value={`${description}`} onChange={(e) => setDescription(e.target.value)} type="text"/>
@@ -113,6 +147,7 @@ const user = useAuthUser();
                 </form>
                 : console.log('nothing')
                 }
+                <p>Category:{category ? category : foundProject?.category}</p>
                 {updateCategory ?
 
                 <form action="" onSubmit={handleUpdate}>
@@ -129,14 +164,7 @@ const user = useAuthUser();
 
                 </form> :
                 console.log('nope')
-                
-            
             }
-
-                
-            
-            
-        
 
                 <button onClick={()=>handleDelete(foundProject?._id)}>Delete</button>
                 
