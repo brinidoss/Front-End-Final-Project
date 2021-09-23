@@ -100,7 +100,7 @@ const user = useAuthUser();
     return (
         <div className="ProjectDescription">
             <div className="ProjectDescription__Container">
-                <h2>{foundProject?.name}</h2>
+                <h2>{name ? name : foundProject?.name}</h2>
                 {updateName ? 
                 <form className={style}  onSubmit={handleUpdate}>
                     <input value={`${name}`} onChange={(e) => setName(e.target.value)} type="text"/>
