@@ -2,7 +2,7 @@
   border: solid black 1px;
   padding: 10px;
   margin: 5px;
-  background-color: white;
+  
   cursor: move;
   width: 150px;
   border-radius: 10px;
@@ -44,7 +44,15 @@
 	position:relative;
 	top:1px;
 }
-.dream {
+/* .ProjectCard .dream {
+	background-color: purple;
+}
+.ProjectCard__card.urgent {
+	background-color: yellow;
+} */
+
+
+/* .dream {
   background-color: aqua;
 }
 .soon {
@@ -114,6 +122,6 @@ background-image: linear-gradient(0deg, #afeeee 53%, #09735b 88%);
 	background-color: #98fb98;
 background-image: linear-gradient(0deg, #98fb98 53%, #09735b 88%);
 
-}
+} */
 
 

@@ -2,7 +2,7 @@
   border: solid black 2px;
   padding: 10px;
   margin: 0px 10px 10px 10px;
-  background-color: #22161c;
+  background-color: whitesmoke;
   /* background-color: rgb(226, 167, 128); */
   /* background-image: url("../images/houses.jpg"); */
   background-size: cover;
@@ -14,3 +14,87 @@
   align-items: center;
   flex-direction: column;
 }
+.ProjectCard:nth-child(1) .dream{
+  background-color: #FFDBC8;
+}
+.ProjectCard:nth-child(2) .dream{
+  background-color: #FF9864;
+}
+.ProjectCard:nth-child(3) .dream{
+  background-color: #FF7632;
+}
+.ProjectCard:nth-child(4) .dream{
+  background-color: #CC4400;
+}
+.ProjectCard:nth-child(5) .dream{
+  background-color: #993300;
+}
+/* This is the coming soon section */
+
+.ProjectCard:nth-child(1) .comingSoon{
+  background-color: #FFFDC8;
+}
+.ProjectCard:nth-child(2) .comingSoon{
+  background-color: #FFFE64;
+}
+.ProjectCard:nth-child(3) .comingSoon{
+  background-color: #FFFE32;
+}
+.ProjectCard:nth-child(4) .comingSoon{
+  background-color: #CCCC00;
+}
+.ProjectCard:nth-child(5) .comingSoon{
+  background-color: #999900;
+}
+/* This is the urgent section */
+.ProjectCard:nth-child(1) .urgent{
+  background-color: #CCFDD1;
+}
+.ProjectCard:nth-child(2) .urgent{
+  background-color: #66FE7E;
+}
+.ProjectCard:nth-child(3) .urgent{
+  background-color: #33FE54 ;
+}
+.ProjectCard:nth-child(4) .urgent{
+  background-color: #00CC22;
+}
+.ProjectCard:nth-child(5) .urgent{
+  background-color: #00991A;
+}
+
+/* This is the in progress section */
+.ProjectCard:nth-child(1) .inProgress{
+  background-color: #CCECFB; 
+} 
+  
+ .ProjectCard:nth-child(2) .inProgress{
+  background-color: #66CBFD;
+}
+.ProjectCard:nth-child(3) .inProgress{
+  background-color: #33BAFE;
+}
+.ProjectCard:nth-child(4) .inProgress{
+  background-color: #0088CC;
+}
+.ProjectCard:nth-child(5) .inProgress{
+  background-color: #006699;
+} 
+
+/* This is the complete section */
+ 
+.ProjectCard:nth-child(1) .complete{
+  background-color: #FFCAEA;
+}
+.ProjectCard:nth-child(2) .complete{
+  background-color: #FF97DA;
+}
+.ProjectCard:nth-child(3) .complete{
+  background-color: #FF32BA;
+}
+.ProjectCard:nth-child(4) .complete{
+  background-color: #CC0088;
+}
+.ProjectCard:nth-child(5) .complete{
+  background-color: #990066;
+} 

@@ -54,7 +54,7 @@ handleCardStyle();
 
 return (
         <div className={`ProjectCard`}>
-            <div className={`ProjectCard__card draggable ${styleCard} ${project.outdoor? `outdoor`: `indoor`}`} 
+            <div className={`ProjectCard__card ${project.category} draggable ${styleCard} ${project.outdoor? `outdoor`: `indoor`}`} 
             draggable
             onDragStart={ handleOnDragStart }
             onDragOver={(e) => e.preventDefault()}

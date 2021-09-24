@@ -31,6 +31,7 @@ function Column({category, handleOnDragStart, handleOnDrop, projects}: Props) {
                 index={index}
                 handleOnDragStart={() => handleOnDragStart(project)}
                 
+                
             />
             )}
         </div>
