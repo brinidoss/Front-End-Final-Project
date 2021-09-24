@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useAuthUser } from "../Context/auth-context";
 import Project from "../model/Project";
 import { deleteProject, fetchProjects, updateProject } from "../services/ProjectService";
@@ -24,6 +24,9 @@ const user = useAuthUser();
     const [label, setLabel] = useState('');
     const { id } = useParams<RouteParams>();
 
+     //the id appears in the url and we use Params and the find method to find the specific project by id
+     const foundProject: Project | undefined = projects.find((project) => project._id === id);
+
     
     
     function handleDelete(_id: any) {
@@ -36,6 +39,8 @@ const user = useAuthUser();
         if (user?.uid) {
             fetchProjects(user.uid).then(setProjects);
         };
+
+
     }
 
     function handleUpdate(e: FormEvent){
@@ -94,13 +99,17 @@ const user = useAuthUser();
 
     useEffect(loadProjects, []);
 
-    //the id appears in the url and we use Params and the find method to find the specific project by id
-    const foundProject: Project | undefined = projects.find((project) => project._id === id);
+    // //the id appears in the url and we use Params and the find method to find the specific project by id
+    // const foundProject: Project | undefined = projects.find((project) => project._id === id);
 
     return (
         <div className="ProjectDescription">
             <div className="ProjectDescription__Container">
-                <h2>{name ? name : foundProject?.name}</h2>
+                <div className="description-content"> 
+                <div className="ProjectDescription__Header">
+                    <h2>{name ? name : foundProject?.name}</h2>
+                    <NavLink to="/Board" id="back-to-board">X</NavLink>
+                </div>
                 {updateName ? 
                 <form className={style}  onSubmit={handleUpdate}>
                     <input value={`${name}`} onChange={(e) => setName(e.target.value)} type="text"/>
@@ -167,9 +176,13 @@ const user = useAuthUser();
             }
 
                 <button onClick={()=>handleDelete(foundProject?._id)}>Delete</button>
-                
-               
+                </div>
+                <div className="desc-one grid-item"></div>
+                <div className="desc-two grid-item"></div>
+                <div className="desc-three grid-item"></div>
+                <div className="desc-four grid-item"></div>
             </div>    
+           
         </div>
     )
 }

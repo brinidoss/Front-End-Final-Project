@@ -71,20 +71,34 @@ function Form({ onAdd }: Props) {
 
         <div className="ProjectForm__option labelOption">
             {/* <p>Label</p> */}
-            <input type="radio" name="label" id="none" value="none" onChange={ (e) => setLabel(e.target.value) }/>
-            <label htmlFor="none">None</label>
-            <input type="radio" name="label" id="kitchen" value="kitchen" onChange={ (e) => setLabel(e.target.value) }/>
-            <label htmlFor="kitchen">Kitchen</label>
-            <input type="radio" name="label" id="bath" value="bath" onChange={ (e) => setLabel(e.target.value) }/>
-            <label htmlFor="bath">Bath</label>
-            <input type="radio" name="label" id="bedroom" value="bedroom" onChange={ (e) => setLabel(e.target.value) }/>
-            <label htmlFor="bedroom">Bedroom</label><br></br>
-            <input type="radio" name="label" id="living" value="living" onChange={ (e) => setLabel(e.target.value) }/>
-            <label htmlFor="living">Living Room</label>
-            <input type="radio" name="label" id="basement" value="basement" onChange={ (e) => setLabel(e.target.value) }/>
-            <label htmlFor="basement">Basement</label>
-            <input type="radio" name="label" id="office" value="office" onChange={ (e) => setLabel(e.target.value) }/>
-            <label htmlFor="office">Home Office</label>
+            <div>
+              <input type="radio" name="label" id="none" value="none" onChange={ (e) => setLabel(e.target.value) }/>
+              <label htmlFor="none">None</label>
+            </div>
+            <div>
+              <input type="radio" name="label" id="kitchen" value="kitchen" onChange={ (e) => setLabel(e.target.value) }/>
+              <label htmlFor="kitchen">Kitchen</label>
+            </div>
+            <div>
+              <input type="radio" name="label" id="bath" value="bath" onChange={ (e) => setLabel(e.target.value) }/>
+              <label htmlFor="bath">Bath</label>
+            </div>
+            <div>
+              <input type="radio" name="label" id="bedroom" value="bedroom" onChange={ (e) => setLabel(e.target.value) }/>
+              <label htmlFor="bedroom">Bedroom</label><br></br>
+            </div>
+            <div>
+              <input type="radio" name="label" id="living" value="living" onChange={ (e) => setLabel(e.target.value) }/>
+              <label htmlFor="living">Living Room</label>
+            </div>
+            <div>
+              <input type="radio" name="label" id="basement" value="basement" onChange={ (e) => setLabel(e.target.value) }/>
+              <label htmlFor="basement">Basement</label>
+            </div>
+            <div>
+              <input type="radio" name="label" id="office" value="office" onChange={ (e) => setLabel(e.target.value) }/>
+              <label htmlFor="office">Home Office</label>
+            </div>
         </div>
 
         {/* <div className="ProjectForm__option priorityOption">

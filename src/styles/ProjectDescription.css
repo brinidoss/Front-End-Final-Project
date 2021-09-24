@@ -4,11 +4,15 @@
 }
 
 .ProjectDescription__Container {
-  background-color: papayawhip;
+  background-color: white;
   width: 40vw;
   height: 500px;
   margin-top: 20px;
   border-radius: 5px;
+  box-shadow: 2px 2px 15px 2px #000000;
+  margin-top: 50px;
+  display: grid;
+  gap: 20px;
 }
 .hidden {
   display: none;
@@ -17,3 +21,46 @@
   display: block;
 }
 
+.ProjectDescription__Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.ProjectDescription #back-to-board {
+  text-decoration: none;
+}
+
+.description-content {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.desc-one {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: red;
+  border-top-left-radius: 5px;
+}
+
+.desc-two {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: yellow;
+}
+
+.desc-three {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: green;
+}
+
+.desc-four {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  background-color: blue;
+  border-bottom-left-radius: 5px;
+}
