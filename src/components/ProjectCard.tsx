@@ -53,14 +53,13 @@ handleCardStyle();
 //we also create a link to the project description based on the id
 
 return (
-        <div className={`ProjectCard`}>
-            <div className={`ProjectCard__card ${project.category} draggable ${styleCard} ${project.outdoor? `outdoor`: `indoor`}`} 
-            draggable
-            onDragStart={ handleOnDragStart }
-            onDragOver={(e) => e.preventDefault()}
-            
+        <div className={`ProjectCard `}>
+            <div className={`ProjectCard__card  draggable ${project.category} ${styleCard} ${project.outdoor? `outdoor`: `indoor`}`} 
+                draggable
+                onDragStart={ handleOnDragStart }
+                onDragOver={(e) => e.preventDefault()}
             >
-
+                <div className="ProjectCard__text">
                 <p className="project-name">{project.name}</p>
                 
                 <div className="btn-container">
@@ -68,7 +67,7 @@ return (
                         <button className="editBtn">Info</button>
                     </Link>
                 </div>
-                
+                </div>
             </div>
         </div>
     )
