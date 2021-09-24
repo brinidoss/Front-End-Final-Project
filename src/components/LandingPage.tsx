@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import HomeRenovationPix from '../images/HomeRenovationPix.jpeg';
-import './LandingPage.css';
+import '../styles/LandingPage.css';
 import { useAuthUser } from "../Context/auth-context";
 import firebase from "../firebaseConfig";
 import SignInButton from "./SignInButton";

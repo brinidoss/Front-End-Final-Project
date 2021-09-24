@@ -1,6 +1,6 @@
 import Project from "../model/Project";
 import ProjectCard from "./ProjectCard";
-import './Column.css';
+import '../styles/Column.css';
 import { useState } from "react";
 
 interface Props {

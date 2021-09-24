@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import "../components/HomePage.css"
+import "../styles/HomePage.css"
 import Project from "../model/Project";
 import { fetchProjects } from "../services/ProjectService";
 import NewProject from "../images/NewProject.png";

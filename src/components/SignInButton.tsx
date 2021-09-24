@@ -1,5 +1,5 @@
 import firebase, {authProvider} from '../firebaseConfig';
-import './SignInButton.css';
+import '../styles/SignInButton.css';
 
 function signIn() {
   firebase.auth().signInWithPopup(authProvider);

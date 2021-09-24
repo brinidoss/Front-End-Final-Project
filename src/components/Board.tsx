@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import Project from '../model/Project'
 import { fetchProjects, updateProject } from '../services/ProjectService';
-import Column from './Column'
-import './board.css';
+import Column from './Column';
+import '../styles/board.css';
 import { useAuthUser } from '../Context/auth-context';
 
 

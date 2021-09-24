@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useAuthUser } from "../Context/auth-context";
 import Project from "../model/Project";
 import { deleteProject, fetchProjects, updateProject } from "../services/ProjectService";
-import './ProjectDescription.css';
+import '../styles/ProjectDescription.css';
 
 
  interface RouteParams {
