@@ -89,11 +89,11 @@ const user = useAuthUser();
             </div>
             <div className="test-btn">
                <div className="brdbtn">
-            <NavLink to="/Board"><img className="homepage1" src={ProjectBoard} alt="project board pix"/></NavLink>
+            <NavLink to="/Board"><img className="img-proj-board" src={ProjectBoard} alt="project board pix"/></NavLink>
             {/* <button className="boardBtn">Go to Board</button> */}
             </div> 
             <div className="projbtn">
-            <NavLink to="/Form"><img className="homepage" src={NewProject} alt="newproject pix"/></NavLink>
+            <NavLink to="/Form"><img className="img-proj-new" src={NewProject} alt="newproject pix"/></NavLink>
             
             {/* <button className="ProjectBtn">New Project</button> */}
             </div>
