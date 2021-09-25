@@ -81,6 +81,7 @@ padding-right: 50px;
     height: 25vh;
     box-shadow: 3px 3px 15px 2px #000000;
     border-radius: 10px;
+    margin: 0px;
 }
 
 .img-proj-board {
@@ -88,6 +89,7 @@ padding-right: 50px;
     height: 25vh;
     box-shadow: 3px 3px 15px 2px #000000;
     border-radius: 10px;
+    margin: 0px;
 }
 @media only screen and (min-width: 768px) {
     .parent {
