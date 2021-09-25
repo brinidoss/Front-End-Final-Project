@@ -7,20 +7,27 @@
     width: 100vw;
     
 }
+img {
+    padding: 0;
+    height: 100%;
+}
 
 .brdbtn {
     text-align: right;
-    padding-right: 250px;
-    padding-top: 150px;
+    margin-bottom: 25px;
+    
  
-
 }
 
 .projbtn {
     text-align: right;
-    padding-right: 250px;
-    padding-top: 150px;
+    margin-top: 25px;
+    
 
+}
+.test-btn {
+   align-self: center;
+   
 }
 
 .boardBtn {
@@ -29,6 +36,7 @@ font-weight: 800;
 padding: 20px;
 padding-left: 50px;
 padding-right: 50px;
+
 }
 
 .ProjectBtn {
@@ -38,6 +46,7 @@ padding: 20px;
 padding-left: 50px;
 padding-right: 50px;
 }
+
 .stat-sheet{
     height: 40px;
     border-radius: 0px 30px 30px 0px;
@@ -68,10 +77,14 @@ div.stat-area-home{
 .homepage1 {
     width: 40vh;
     height: 25vh;
+    box-shadow: 3px 3px 15px 2px #000000;
+    border-radius: 10px;
 }
 
 .homepage {
     width: 40vh;
     height: 25vh;
+    box-shadow: 3px 3px 15px 2px #000000;
+    border-radius: 10px;
 }
 
