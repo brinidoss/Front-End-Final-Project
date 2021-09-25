@@ -111,76 +111,113 @@ const user = useAuthUser();
                     <NavLink to="/Board" id="back-to-board">X</NavLink>
                 </div>
                 {updateName ? 
-                <form className={style}  onSubmit={handleUpdate}>
-                    <input value={`${name}`} onChange={(e) => setName(e.target.value)} type="text"/>
-                 
-                    <button>update</button>
-        
+                <form className={`${style} form-flex`}  onSubmit={handleUpdate}>
+                    <div>
+                        <input className="desc-input" value={`${name}`} onChange={(e) => setName(e.target.value)} type="text" placeholder="Edit Project Name"/>
+                    </div>
+                    <div>
+                        <button className="save-button">Save</button>
+                    </div>
                 </form>
                 : console.log('nothing')
                 }
-                <button onClick={()=> handleShowUpdate()}>Edit</button>
                 
+                <div className="label-container">
+                    <p className="description-label">{category ? category : foundProject?.category}</p>
+                    <p className="description-label">{label ? label : foundProject?.label}</p>
+                    
+                </div>
                 
-                <p>Label: {label ? label : foundProject?.label}</p>
+                {updateCategory ?
+
+                    <form className="form-flex" onSubmit={handleUpdate}>
+                        {/* <label htmlFor="category">Category</label> */}
+                        <div>
+                            <select className="desc-input" id="category" name="category" onChange={ (e) => setCategory(e.target.value) }>
+                                <option value="" disabled selected hidden>Select a Category</option>
+                                <option value="dream">Dream Project</option>
+                                <option value="comingSoon">Coming Soon</option>
+                                <option value="urgent">Urgent</option>
+                                <option value="inProgress">In Progress</option>
+                                <option value="complete">Complete</option>
+                        </select>
+                        </div>
+                        <div>
+                            <button className="save-button">Save</button>
+                        </div>
+                    </form> :
+                    console.log('nope')
+                }
+                
                 {updateLabel ? 
-                <form className="" onSubmit={handleUpdate} >
+                <form className="form-flex" onSubmit={handleUpdate} >
                 {/* <p>Label</p> */}
-                <input type="radio" name="label" id="none" value="none" onChange={ (e) => setLabel(e.target.value) }/>
-                <label htmlFor="none">None</label>
-                <input type="radio" name="label" id="kitchen" value="kitchen" onChange={ (e) => setLabel(e.target.value) }/>
-                <label htmlFor="kitchen">Kitchen</label>
-                <input type="radio" name="label" id="bath" value="bath" onChange={ (e) => setLabel(e.target.value) }/>
-                <label htmlFor="bath">Bath</label>
-                <input type="radio" name="label" id="bedroom" value="bedroom" onChange={ (e) => setLabel(e.target.value) }/>
-                <label htmlFor="bedroom">Bedroom</label><br></br>
-                <input type="radio" name="label" id="living" value="living" onChange={ (e) => setLabel(e.target.value) }/>
-                <label htmlFor="living">Living Room</label>
-                <input type="radio" name="label" id="basement" value="basement" onChange={ (e) => setLabel(e.target.value) }/>
-                <label htmlFor="basement">Basement</label>
-                <input type="radio" name="label" id="office" value="office" onChange={ (e) => setLabel(e.target.value) }/>
-                <label htmlFor="office">Home Office</label>
-                <button>Update</button>
-            
+                <div className="radio-content">
+                    <div>
+                        <input className="desc-radio" type="radio" name="label" id="none" value="none" onChange={ (e) => setLabel(e.target.value) }/>
+                        <label htmlFor="none">None</label>
+                    </div>
+                    <div>
+                        <input className="desc-radio" type="radio" name="label" id="kitchen" value="kitchen" onChange={ (e) => setLabel(e.target.value) }/>
+                        <label htmlFor="kitchen">Kitchen</label>
+                    </div>
+                    <div>
+                        <input className="desc-radio" type="radio" name="label" id="bath" value="bath" onChange={ (e) => setLabel(e.target.value) }/>
+                        <label htmlFor="bath">Bath</label>
+                    </div>
+                    <div>
+                        <input className="desc-radio" type="radio" name="label" id="bedroom" value="bedroom" onChange={ (e) => setLabel(e.target.value) }/>
+                        <label htmlFor="bedroom">Bedroom</label><br></br>
+                    </div>
+                        <input className="desc-radio" type="radio" name="label" id="living" value="living" onChange={ (e) => setLabel(e.target.value) }/>
+                        <label htmlFor="living">Living Room</label>
+                    <div>
+                        <input className="desc-radio" type="radio" name="label" id="basement" value="basement" onChange={ (e) => setLabel(e.target.value) }/>
+                        <label htmlFor="basement">Basement</label>
+                    </div>
+                    <div>
+                        <input className="desc-radio" type="radio" name="label" id="office" value="office" onChange={ (e) => setLabel(e.target.value) }/>
+                        <label htmlFor="office">Home Office</label>
+                    </div>
+                </div>
+                <div>
+                    <button className="save-button">Save</button>
+                </div>
             </form>
             : console.log('nope')
             
                 }
-                <p>Description: {description ? description : foundProject?.description}</p>
+                <p className="descript">Description:</p> 
+                <div className="descript description-div">{description ? description : foundProject?.description}</div>
                 {updateDesc ? 
-                <form className={style}  onSubmit={handleUpdate}>
-                    <input value={`${description}`} onChange={(e) => setDescription(e.target.value)} type="text"/>
-                 
-                    <button>update</button>
-        
+                <form className={`${style} form-flex`}  onSubmit={handleUpdate}>
+                    <div>
+                        <textarea className="desc-input" value={`${description}`} onChange={(e) => setDescription(e.target.value)} rows={4} placeholder="Edit Project Description"/>
+                    </div>
+                    <div>
+                        <button className="save-button">Save</button>
+                    </div>
                 </form>
                 : console.log('nothing')
                 }
-                <p>Category:{category ? category : foundProject?.category}</p>
-                {updateCategory ?
-
-                <form action="" onSubmit={handleUpdate}>
-                    {/* <label htmlFor="category">Category</label> */}
-                    <select className="ProjectForm__input" id="category" name="category" onChange={ (e) => setCategory(e.target.value) }>
-                    <option value="" disabled selected hidden>Select a Category</option>
-                    <option value="dream">Dream Project</option>
-                    <option value="comingSoon">Coming Soon</option>
-                    <option value="urgent">Urgent</option>
-                    <option value="inProgress">In Progress</option>
-                    <option value="complete">Complete</option>
-                    </select>
-                    <button>update</button>
-
-                </form> :
-                console.log('nope')
-            }
-
-                <button onClick={()=>handleDelete(foundProject?._id)}>Delete</button>
+                
+            <div className="description-container-buttons">
+                <button className="description-button" onClick={()=> handleShowUpdate()}>Edit</button>
+                <button id="delete-button" className="description-button" onClick={()=>handleDelete(foundProject?._id)}>Delete</button>
+            </div>
                 </div>
-                <div className="desc-one grid-item"></div>
-                <div className="desc-two grid-item"></div>
-                <div className="desc-three grid-item"></div>
-                <div className="desc-four grid-item"></div>
+                <div className="desc-one grid-item">
+                    <div className="white-bottom"></div>
+                </div>
+                <div className="desc-two grid-item">
+                    <div className="white-bottom"></div>
+                </div>
+                <div className="desc-three grid-item">
+                    <div className="white-bottom"></div>
+                </div>
+                <div className="desc-four grid-item">
+                    <div className="white-bottom"></div>
+                </div>
             </div>    
            
         </div>
