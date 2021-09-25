@@ -27,18 +27,4 @@ h2 {
   text-decoration: line-through;
   text-decoration-color: red;
 }
-.stat-sheet {
-}
-.stat-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(181, 179, 179);
-  border-radius: 10px;
-}
-.stat-label {
-  border-bottom: black solid;
-  margin-bottom: 0;
-}
+

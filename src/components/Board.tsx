@@ -199,34 +199,6 @@ let complete = handleCompleteFilter();
                 </div>
             </div>
 
-
-            <div>
-                <h2>Stats</h2>
-                <div className ="stat-area">
-                    <div>
-                        <p className="stat-label">Dream</p>
-                        <div className="stat-sheet" style={{width: `${dreamPercent}%`, backgroundColor: `blueviolet`} }>{dreams} </div>
-                    </div>
-                    <div>
-                        <p className="stat-label">Coming Soon</p>
-                        <div className="stat-sheet" style={{width: `${soonPercent}%`, backgroundColor: `yellow`} }>{soon} </div>
-                    </div>
-                    <div>
-                        <p className="stat-label">Urgent</p>
-                        <div className="stat-sheet" style={{width: `${urgentPercent}%`, backgroundColor: `red`} }>{urgent} </div>
-                    </div>
-                    <div>
-                        <p className="stat-label">In Progress</p>
-                        <div className="stat-sheet" style={{width: `${progressPercent}%`, backgroundColor: `orange`} }>{progress} </div>
-                    </div>
-                    <div>
-                        <p className="stat-label">Complete</p>
-                        <div className="stat-sheet" style={{width: `${completePercent}%`, backgroundColor: `green`} }>{complete} </div> 
-                    </div>
-                
-                </div>  
-                
-            </div>
             
         </div>
     )

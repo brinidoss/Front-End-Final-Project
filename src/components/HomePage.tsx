@@ -66,24 +66,24 @@ const user = useAuthUser();
         <div className="parent">
             <div className ="stat-area-home">
                     <div>
-                        <p className="stat-label-home">Dream</p>
-                        <div className="stat-sheet" style={{width: `${dreamPercent}%`, backgroundColor: `blueviolet`} }>{dreams} </div>
+                        <p className="stat-label">Dream</p>
+                        <div className="stat-sheet" style={{width: `${dreamPercent}%`, backgroundColor: `#ff7632`} }>{dreams ? dreams : ""} </div>
                     </div>
                     <div>
                         <p className="stat-label">Coming Soon</p>
-                        <div className="stat-sheet" style={{width: `${soonPercent}%`, backgroundColor: `yellow`} }>{soon} </div>
+                        <div className="stat-sheet" style={{width: `${soonPercent}%`, backgroundColor: `#fffe32`} }>{soon ? soon : ""} </div>
                     </div>
                     <div>
                         <p className="stat-label">Urgent</p>
-                        <div className="stat-sheet" style={{width: `${urgentPercent}%`, backgroundColor: `red`} }>{urgent} </div>
+                        <div className="stat-sheet" style={{width: `${urgentPercent}%`, backgroundColor: `#33fe54`} }>{urgent ? urgent : ""} </div>
                     </div>
                     <div>
                         <p className="stat-label">In Progress</p>
-                        <div className="stat-sheet" style={{width: `${progressPercent}%`, backgroundColor: `orange`} }>{progress} </div>
+                        <div className="stat-sheet" style={{width: `${progressPercent}%`, backgroundColor: `#33bafe`} }>{progress ? progress : ""} </div>
                     </div>
                     <div>
                         <p className="stat-label">Complete</p>
-                        <div className="stat-sheet" style={{width: `${completePercent}%`, backgroundColor: `green`} }>{complete} </div> 
+                        <div className="stat-sheet" style={{width: `${completePercent}%`, backgroundColor: `#ff32ba`} }>{complete ? complete : ""} </div> 
                     </div>
            
             </div>

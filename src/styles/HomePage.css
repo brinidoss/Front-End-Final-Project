@@ -39,21 +39,30 @@ padding-left: 50px;
 padding-right: 50px;
 }
 .stat-sheet{
-    
+    height: 40px;
+    border-radius: 0px 30px 30px 0px;
+    box-shadow: 2px 2px 15px 0px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
+
 div.stat-area-home{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 400px;
+    align-self: center;
+    height: 450px;
     width: 20%;
-    background-color: rgb(181, 179, 179);
+    box-shadow: 3px 3px 15px 2px #000000;
+    background-color: azure;
     border-radius: 10px;
+    padding-bottom: 20px;
 }
-.stat-label-home {
-    border-bottom: black solid;
-    margin-bottom: 0;
+.stat-label {
+    
+    margin-bottom: 5px;
 }
 
 .homepage1 {
