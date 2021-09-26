@@ -44,19 +44,13 @@ div.Extras {
   margin-right: 7%;
   display: flex;
   padding: 0px;
-  
   justify-content: space-between;
   align-self: center;
   flex-direction: column;
   align-items: center;
 }
 
-svg.MuiSvgIcon-root.HomeIcon {
-  height: 60px;
-  width: 60px;
-  padding: 15px;
-  fill: black;
-}
+
 a.link-text {
   padding-top: 10px;
   padding-bottom: 5px;
@@ -69,56 +63,21 @@ a.link-text {
 }
 @media only screen and (min-width: 768px) {
  
-  .Header {
-    background-color: #264b77;
-  }
   
-  nav.Nav {
-    display: flex;
-  }
+  
+  
   div.Home {
     flex: 1;
     text-align: left;
     padding-left: 20px;
   }
-  #home-link:visited {
-    text-decoration: none;
-    color: black;
-  }
   
-  h1 {
-    font-size: 54px;
-    color: #b67929;
-    margin-top: 5px;
-    font-family: "Martel Sans", sans-serif;
-    text-transform: uppercase;
-  }
-  
-  .link-text {
-    font-family: "Cabin Sketch", sans-serif;
-    font-weight: bolder;
-    text-decoration: none;
-    color: #b67929;
-    font-size: 20px;
-  }
   
   div.Extras {
-    margin-right: 7%;
-    display: flex;
     padding: 40px;
     width: 300px;
     justify-content: space-between;
     flex-direction: row;
   }
   
-  svg.MuiSvgIcon-root.HomeIcon {
-    height: 60px;
-    width: 60px;
-    padding: 15px;
-    fill: black;
-  }
-  
-  #root-link {
-    text-decoration: none;
-  }
 }

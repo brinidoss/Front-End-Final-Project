@@ -30,8 +30,6 @@ h2 {
 }
 @media only screen and (min-width: 768px) {
   .Board {
-    padding: 0.5rem;
-    display: grid;
     justify-content: start;
     gap: 0.5rem;
     width: 100%;
@@ -42,23 +40,7 @@ h2 {
     background-color: white;
     /* background-image: linear-gradient(to bottom right, #6e304b, #a3acb1); */
   }
-  .colum-box {
-    /* background-color: whitesmoke;
-    border-radius: 10px; */
-    width: 82%;
-    margin-left: 8%;
-    /* border: solid 1px;
-    border-color: black; */
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  h2 {
-    margin: 0;
-  }
-  .complete {
-    text-decoration: line-through;
-    text-decoration-color: red;
-  }
+ 
   
   
 }

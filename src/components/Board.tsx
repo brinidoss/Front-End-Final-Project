@@ -89,40 +89,7 @@ function Board() {
         loadProjects();
 }
 
-//calculating the lengths of the arrays to show stats for how many projects are in each category
-const handleDreamFilter = () => {
-    return projects.filter(x => x.category === 'dream').length
-}
-const handleSoonFilter = () => {
-    return projects.filter(x => x.category === 'comingSoon').length
-}
-const handleUrgentFilter = () => {
-    return projects.filter(x => x.category === 'urgent').length
-}
-const handleProgressFilter = () => {
-    return projects.filter(x => x.category === 'inProgress').length
-}
-const handleCompleteFilter = () => {
-    return projects.filter(x => x.category === 'complete').length
-}
-useEffect(() =>{
-    handleDreamFilter();
-    handleSoonFilter();
-    handleUrgentFilter();
-    handleProgressFilter();
-    handleCompleteFilter();
 
-}, [projects])
-let dreams = handleDreamFilter();
-let soon = handleSoonFilter();
-let urgent = handleUrgentFilter();
-let progress = handleProgressFilter();
-let complete = handleCompleteFilter();
-    let dreamPercent:number = Math.round((dreams / projects.length) * 100) / 100 * 100 ? Math.round((dreams / projects.length) * 100) / 100 * 100 : 0;
-    let soonPercent: number = Math.round((soon / projects.length) * 100) / 100 * 100 ? Math.round((soon / projects.length) * 100) / 100 * 100 : 0;
-    let urgentPercent: number = Math.round((urgent/ projects.length) * 100) / 100 * 100 ? Math.round((urgent / projects.length) * 100) / 100 * 100 : 0;
-    let progressPercent:number = Math.round((progress/ projects.length) * 100) / 100 * 100 ? Math.round((progress / projects.length) * 100) / 100 * 100 : 0;
-    let completePercent: number = Math.round((complete / projects.length) * 100) / 100 * 100 ? Math.round((complete / projects.length) * 100) / 100 * 100 : 0;
     
 //down below we are reusing the Column component for each category and passing the unique category down as a prop
 //child components are passing back up the data we need to determine specific projects and categories that
