@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useHistory, useParams } from "react-router-dom";
 import { useAuthUser } from "../Context/auth-context";
 import Project from "../model/Project";
 import { deleteProject, fetchProjects, updateProject } from "../services/ProjectService";
@@ -27,11 +27,14 @@ const user = useAuthUser();
      //the id appears in the url and we use Params and the find method to find the specific project by id
      const foundProject: Project | undefined = projects.find((project) => project._id === id);
 
-    
+     //useHistory is imported from react router dom
+     //this allows me to redirect to the board after deleting a project (see history.push below)
+    const history = useHistory();
     
     function handleDelete(_id: any) {
         deleteProject(_id);
 
+        history.push(`/Board`);
 
     }
     //fetch projects using the function from services again

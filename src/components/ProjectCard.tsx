@@ -62,11 +62,11 @@ return (
                 <div className="ProjectCard__text">
                 <p className="project-name">{project.name}</p>
                 
-                <div className="btn-container">
+                {/* <div className="btn-container"> */}
                     <Link to={`/Board/${project._id}`}>
                         <button className="editBtn">Info</button>
                     </Link>
-                </div>
+                {/* </div> */}
                 </div>
             </div>
         </div>

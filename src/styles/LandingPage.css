@@ -28,42 +28,46 @@
 img {
   margin-top: 50px;
   padding-top: 25px;
-  
+}
+
+.login-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#LandingPage__logoutButton {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  padding-top: 15px;
+  color: white;
+  background-color: #00243f;
+  width: 150px;
+  height: 50px;
+  font-weight: 800;
+  font-size: larger;
 }
 
 @media only screen and (min-width: 768px) {
- 
   .firstLine {
-    
     font-size: 48px;
-    
   }
-  
+
   .secondLine {
-    
     font-size: 35px;
-    
-    
   }
   img {
     margin-top: 0px;
-    
   }
-  
 }
 @media only screen and (min-width: 1025px) {
   .firstLine {
-    
     font-size: 4rem;
-    
   }
-  
+
   .secondLine {
-    
     font-size: 3rem;
-    
   }
-  
-
-
 }

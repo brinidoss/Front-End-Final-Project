@@ -1,7 +1,7 @@
 .centering-div {
   display: flex;
   justify-content: center;
-  /* background-image: linear-gradient(to bottom right, #3c5b74, #a3acb1); */
+  background-image: linear-gradient(to bottom right, #3c5b74, #a3acb1);
   height: 100vh;
   background-color: white;
 }
@@ -21,14 +21,15 @@
   color: #264b77;
   box-shadow: 2px 2px 15px 2px #000000;
   margin-top: 50px;
+  font-size: 10px;
 }
 
 .ProjectForm h3 {
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   /* background-image: url(../images/tape-measure.jpg);
   background-size: 870px; */
-  background-image: linear-gradient(to bottom right, #3774a7, #eaeff1);
+  background-image: linear-gradient(to bottom right, #b67929, #eaeff1);
   /* background-position: 100px; */
   margin: 0px;
   padding: 30px 0px 30px 0px;
@@ -64,9 +65,18 @@
 
 .ProjectForm__input {
   border-radius: 5px;
-  color: #264b77;
   width: 200px;
   font-family: sans-serif;
   border: dashed 1px lightgray;
   background-color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .ProjectForm {
+    font-size: 15px;
+  }
+
+  .ProjectForm h3 {
+    font-size: 50px;
+  }
 }

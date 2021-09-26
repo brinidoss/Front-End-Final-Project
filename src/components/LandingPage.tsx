@@ -24,6 +24,7 @@ function Landing() {
             <h1 className="firstLine">Every home tells a story...</h1>
             <h1 className="secondLine">Let us help add another chapter to yours.</h1>
         
+            <div className="login-wrapper">
             <div className="login-container"> 
                 { user ?
             <>
@@ -34,7 +35,7 @@ function Landing() {
                 <SignInButton />
                 }
             </div>
-
+            </div>
         <img src={HomeRenovationPix} alt="renovation pix"/>
                  
             </div>
