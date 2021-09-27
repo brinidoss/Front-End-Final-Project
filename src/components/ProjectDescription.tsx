@@ -126,8 +126,34 @@ const user = useAuthUser();
                 }
                 
                 <div className="label-container">
-                    <p className="description-label">{category ? category : foundProject?.category}</p>
-                    <p className="description-label">{label ? label : foundProject?.label}</p>
+                    <p className="description-label">
+                        {category === 'dream' ? 'Dream' : 
+                        category === 'comingSoon' ? 'Coming Soon' :
+                        category === 'urgent' ? 'Urgent' :
+                        category === 'inProgress' ? 'In Progress' :
+                        category === 'complete' ? 'Complete' : 
+                        foundProject?.category === 'dream' ? 'Dream' : 
+                        foundProject?.category === 'comingSoon' ? 'Coming Soon' :
+                        foundProject?.category === 'urgent' ? 'Urgent' :
+                        foundProject?.category === 'inProgress' ? 'In Progress' :
+                        foundProject?.category === 'complete' ? 'Complete' : null}</p>
+                    <p className="description-label">{
+                    
+                    
+                        label  === 'none' ? 'No Label' : 
+                        label  === 'kitchen' ? 'Kitchen' :
+                        label  === 'bath' ? 'Bathroom' :
+                        label  === 'bedroom' ? 'Bedroom' :
+                        label  === 'living' ? 'Living Room' : 
+                        label  === 'basement' ? 'Basement' :
+                        label  === 'office' ? 'Office' : 
+                        foundProject?.label  === 'none' ? 'No Label' : 
+                        foundProject?.label  === 'kitchen' ? 'Kitchen' :
+                        foundProject?.label  === 'bath' ? 'Bathroom' :
+                        foundProject?.label  === 'bedroom' ? 'Bedroom' :
+                        foundProject?.label  === 'living' ? 'Living Room' : 
+                        foundProject?.label  === 'basement' ? 'Basement' :
+                        foundProject?.label  === 'office' ? 'Office' : null}</p>
                     
                 </div>
                 
